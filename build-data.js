@@ -11,13 +11,15 @@ const fs = require("fs");
 const path = require("path");
 
 const J = (p) => JSON.parse(fs.readFileSync(path.join(__dirname, p), "utf8"));
+// news/team/research/gallery 는 { "items": [...] } 구조에서 배열만 추출
+const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : []);
 
-const news     = J("data/json/news.json");
-const team     = J("data/json/team.json");
+const news     = arr(J("data/json/news.json"));
+const team     = arr(J("data/json/team.json"));
 const pubs     = J("data/json/publications.json");
-const research = J("data/json/research.json");
+const research = arr(J("data/json/research.json"));
 const pi       = J("data/json/pi.json");
-const gallery  = J("data/json/gallery.json");
+const gallery  = arr(J("data/json/gallery.json"));
 
 const S = (o) => JSON.stringify(o, null, 2);
 

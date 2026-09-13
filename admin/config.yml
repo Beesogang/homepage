@@ -51,7 +51,7 @@ collections:
         editor: { preview: false }
         fields:
           - label: "팀원 목록"
-            name: "members"
+            name: "items"
             widget: "list"
             summary: "{{fields.name}} ({{fields.role}})"
             fields:
@@ -142,7 +142,7 @@ collections:
         editor: { preview: false }
         fields:
           - label: "연구 분야 목록"
-            name: "areas"
+            name: "items"
             widget: "list"
             summary: "{{fields.title}}"
             fields:

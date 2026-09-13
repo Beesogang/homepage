@@ -1,168 +1,170 @@
-[
-  {
-    "role": "pi",
-    "name": "Jaegeon Ryu",
-    "nameKo": "류재건",
-    "title": "Associate Professor",
-    "email": "jryu@sogang.ac.kr",
-    "research": "Materials Chemistry, Electrochemistry, Electrochemical Analysis",
-    "photo": "assets/img/pi.jpg",
-    "detail": "pi.html"
-  },
-  {
-    "role": "phd",
-    "name": "Jin Yong Kwon",
-    "nameKo": "권진용",
-    "email": "kwonjy1102@sogang.ac.kr",
-    "research": "Si anode, Binder, Dual-ion Batteries",
-    "photo": "assets/img/team/kwon-jinyong.jpg",
-    "notes": [
-      "NRF Ph.D. Research Scholarship (2025), KOSAF Ph.D. Scholarship (2026)",
-      "First-author: Energy Mater. (2026), Chem. Eng. J. (2026), J. Power Sources (2025), J. Mater. Chem. A (2024), Appl. Phys. Rev. (2024)"
-    ]
-  },
-  {
-    "role": "ms",
-    "name": "Younsang Cho",
-    "nameKo": "조연상",
-    "tag": "Chief",
-    "email": "younsang@sogang.ac.kr",
-    "research": "Aqueous / non-aqueous Electrolytes",
-    "photo": "assets/img/team/cho-younsang.jpg",
-    "notes": [
-      "NRF M.S. Research Scholarship (2025), KOSAF M.S. Scholarship (2025), 2025F KECS 학생발표경진대회 우수상",
-      "First-author: Energy Mater. (2026), J. Energy Storage (2026), J. Mater. Chem. A (2026)"
-    ]
-  },
-  {
-    "role": "ms",
-    "name": "Eunbee Kim",
-    "nameKo": "김은비",
-    "email": "kyb9391@sogang.ac.kr",
-    "research": "Si anode, Gel electrolytes, Dual-ion Batteries",
-    "photo": "assets/img/team/kim-eunbee.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Jaehee Han",
-    "nameKo": "한재희",
-    "email": "hanjaehee000228@gmail.com",
-    "research": "High-capacity electrodes",
-    "photo": "assets/img/team/han-jaehee.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Myungsun Kim",
-    "nameKo": "김명선",
-    "email": "audtjs9150@naver.com",
-    "research": "Electrolytes",
-    "photo": "assets/img/team/kim-myungsun.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Yujin Park",
-    "nameKo": "박유진",
-    "email": "jin200e@naver.com",
-    "research": "Sodium-ion Batteries",
-    "photo": "assets/img/team/park-yujin.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Jimin Kim",
-    "nameKo": "김지민",
-    "email": "min001156@gmail.com",
-    "research": "High-capacity electrodes",
-    "photo": "assets/img/team/kim-jimin.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Subin Shin",
-    "nameKo": "신수빈",
-    "email": "shinsubin0610@naver.com",
-    "research": "Solid-state batteries",
-    "photo": "assets/img/team/shin-subin.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Junsik Min",
-    "nameKo": "민준식",
-    "email": "iamsiiik@naver.com",
-    "research": "Sodium-ion Batteries",
-    "photo": "assets/img/team/min-junsik.jpg"
-  },
-  {
-    "role": "ms",
-    "name": "Yeonhee Lee",
-    "nameKo": "이연희",
-    "email": "summango15@naver.com",
-    "research": "Electrochemical conversion (co-affiliated to KRICT)",
-    "photo": "assets/img/team/lee-yeonhee.jpg"
-  },
-  {
-    "role": "ug",
-    "name": "Dookyun Jung",
-    "nameKo": "정두균",
-    "email": "enrbs524@gmail.com",
-    "research": "Electrolytes",
-    "photo": "assets/img/team/jung-dookyun.jpg"
-  },
-  {
-    "role": "ug",
-    "name": "Hansol Chung",
-    "nameKo": "정한솔",
-    "email": "hansoljung0507@gmail.com",
-    "research": "Battery Binders",
-    "photo": "assets/img/team/chung-hansol.jpg"
-  },
-  {
-    "role": "ug",
-    "name": "Hyunwoo Kang",
-    "nameKo": "강현우",
-    "email": "giantkhw0827@naver.com",
-    "research": "Battery Binders",
-    "photo": "assets/img/team/kang-hyunwoo.jpg"
-  },
-  {
-    "role": "ug",
-    "name": "Heewoo Kim",
-    "nameKo": "김희우",
-    "email": "",
-    "research": "",
-    "photo": "assets/img/team/kim-heewoo.jpg"
-  },
-  {
-    "role": "ug",
-    "name": "Nayoung Lee",
-    "nameKo": "이나영",
-    "email": "nylee0095@gmail.com",
-    "research": "",
-    "photo": "assets/img/team/lee-nayoung.jpg"
-  },
-  {
-    "role": "alumni",
-    "name": "Jin Jun Heo",
-    "nameKo": "허진준",
-    "period": "MS / 23.09–25.08",
-    "research": "Polymers",
-    "current": "SK hynix",
-    "photo": "assets/img/team/heo-jinjun.jpg"
-  },
-  {
-    "role": "alumni",
-    "name": "Insu Jeong",
-    "nameKo": "정인수",
-    "period": "Visiting / 19.09–25.08",
-    "research": "Electrolytes",
-    "current": "LG Energy Solution",
-    "photo": "assets/img/team/jeong-insu.jpg"
-  },
-  {
-    "role": "alumni",
-    "name": "Gijung Lee",
-    "nameKo": "이기정",
-    "period": "MS / 23.09–26.02",
-    "research": "Ceramics",
-    "current": "LG Energy Solution",
-    "photo": "assets/img/team/lee-gijung.jpg"
-  }
-]
+{
+  "items": [
+    {
+      "role": "pi",
+      "name": "Jaegeon Ryu",
+      "nameKo": "류재건",
+      "title": "Associate Professor",
+      "email": "jryu@sogang.ac.kr",
+      "research": "Materials Chemistry, Electrochemistry, Electrochemical Analysis",
+      "photo": "assets/img/pi.jpg",
+      "detail": "pi.html"
+    },
+    {
+      "role": "phd",
+      "name": "Jin Yong Kwon",
+      "nameKo": "권진용",
+      "email": "kwonjy1102@sogang.ac.kr",
+      "research": "Si anode, Binder, Dual-ion Batteries",
+      "photo": "assets/img/team/kwon-jinyong.jpg",
+      "notes": [
+        "NRF Ph.D. Research Scholarship (2025), KOSAF Ph.D. Scholarship (2026)",
+        "First-author: Energy Mater. (2026), Chem. Eng. J. (2026), J. Power Sources (2025), J. Mater. Chem. A (2024), Appl. Phys. Rev. (2024)"
+      ]
+    },
+    {
+      "role": "ms",
+      "name": "Younsang Cho",
+      "nameKo": "조연상",
+      "tag": "Chief",
+      "email": "younsang@sogang.ac.kr",
+      "research": "Aqueous / non-aqueous Electrolytes",
+      "photo": "assets/img/team/cho-younsang.jpg",
+      "notes": [
+        "NRF M.S. Research Scholarship (2025), KOSAF M.S. Scholarship (2025), 2025F KECS 학생발표경진대회 우수상",
+        "First-author: Energy Mater. (2026), J. Energy Storage (2026), J. Mater. Chem. A (2026)"
+      ]
+    },
+    {
+      "role": "ms",
+      "name": "Eunbee Kim",
+      "nameKo": "김은비",
+      "email": "kyb9391@sogang.ac.kr",
+      "research": "Si anode, Gel electrolytes, Dual-ion Batteries",
+      "photo": "assets/img/team/kim-eunbee.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Jaehee Han",
+      "nameKo": "한재희",
+      "email": "hanjaehee000228@gmail.com",
+      "research": "High-capacity electrodes",
+      "photo": "assets/img/team/han-jaehee.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Myungsun Kim",
+      "nameKo": "김명선",
+      "email": "audtjs9150@naver.com",
+      "research": "Electrolytes",
+      "photo": "assets/img/team/kim-myungsun.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Yujin Park",
+      "nameKo": "박유진",
+      "email": "jin200e@naver.com",
+      "research": "Sodium-ion Batteries",
+      "photo": "assets/img/team/park-yujin.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Jimin Kim",
+      "nameKo": "김지민",
+      "email": "min001156@gmail.com",
+      "research": "High-capacity electrodes",
+      "photo": "assets/img/team/kim-jimin.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Subin Shin",
+      "nameKo": "신수빈",
+      "email": "shinsubin0610@naver.com",
+      "research": "Solid-state batteries",
+      "photo": "assets/img/team/shin-subin.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Junsik Min",
+      "nameKo": "민준식",
+      "email": "iamsiiik@naver.com",
+      "research": "Sodium-ion Batteries",
+      "photo": "assets/img/team/min-junsik.jpg"
+    },
+    {
+      "role": "ms",
+      "name": "Yeonhee Lee",
+      "nameKo": "이연희",
+      "email": "summango15@naver.com",
+      "research": "Electrochemical conversion (co-affiliated to KRICT)",
+      "photo": "assets/img/team/lee-yeonhee.jpg"
+    },
+    {
+      "role": "ug",
+      "name": "Dookyun Jung",
+      "nameKo": "정두균",
+      "email": "enrbs524@gmail.com",
+      "research": "Electrolytes",
+      "photo": "assets/img/team/jung-dookyun.jpg"
+    },
+    {
+      "role": "ug",
+      "name": "Hansol Chung",
+      "nameKo": "정한솔",
+      "email": "hansoljung0507@gmail.com",
+      "research": "Battery Binders",
+      "photo": "assets/img/team/chung-hansol.jpg"
+    },
+    {
+      "role": "ug",
+      "name": "Hyunwoo Kang",
+      "nameKo": "강현우",
+      "email": "giantkhw0827@naver.com",
+      "research": "Battery Binders",
+      "photo": "assets/img/team/kang-hyunwoo.jpg"
+    },
+    {
+      "role": "ug",
+      "name": "Heewoo Kim",
+      "nameKo": "김희우",
+      "email": "",
+      "research": "",
+      "photo": "assets/img/team/kim-heewoo.jpg"
+    },
+    {
+      "role": "ug",
+      "name": "Nayoung Lee",
+      "nameKo": "이나영",
+      "email": "nylee0095@gmail.com",
+      "research": "",
+      "photo": "assets/img/team/lee-nayoung.jpg"
+    },
+    {
+      "role": "alumni",
+      "name": "Jin Jun Heo",
+      "nameKo": "허진준",
+      "period": "MS / 23.09–25.08",
+      "research": "Polymers",
+      "current": "SK hynix",
+      "photo": "assets/img/team/heo-jinjun.jpg"
+    },
+    {
+      "role": "alumni",
+      "name": "Insu Jeong",
+      "nameKo": "정인수",
+      "period": "Visiting / 19.09–25.08",
+      "research": "Electrolytes",
+      "current": "LG Energy Solution",
+      "photo": "assets/img/team/jeong-insu.jpg"
+    },
+    {
+      "role": "alumni",
+      "name": "Gijung Lee",
+      "nameKo": "이기정",
+      "period": "MS / 23.09–26.02",
+      "research": "Ceramics",
+      "current": "LG Energy Solution",
+      "photo": "assets/img/team/lee-gijung.jpg"
+    }
+  ]
+}

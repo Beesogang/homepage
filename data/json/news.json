@@ -1,182 +1,184 @@
-[
-  {
-    "date": "2026.08",
-    "type": "welcome",
-    "text": "We hosted an invited talk from Prof. Sehwan Park (Kookmin U) on the cathode–SSE failure mechanism."
-  },
-  {
-    "date": "2026.07",
-    "type": "paper",
-    "text": "Congrats! Jin Yong and Younsang's paper has been accepted in Energy Materials (Interface)."
-  },
-  {
-    "date": "2026.07",
-    "type": "paper",
-    "text": "Congrats! Younsang's paper has been accepted in Journal of Energy Storage (Electrolyte)."
-  },
-  {
-    "date": "2026.06",
-    "type": "award",
-    "text": "권진용 학생이 한국장학재단 박사우수장학금 장학생(수도권 이공계열 400명 내외)으로 선정되었습니다."
-  },
-  {
-    "date": "2026.05",
-    "type": "award",
-    "text": "Our two papers have been recognized as \"Highly Cited Paper Award\" from Sogang University."
-  },
-  {
-    "date": "2026.04",
-    "type": "welcome",
-    "text": "We hosted an invited talk from Prof. Se Hun Joo (Sookmyung Women's U) on theoretical calculations and ML/AI for energy."
-  },
-  {
-    "date": "2026.04",
-    "type": "welcome",
-    "text": "We hosted an invited talk from Dr. Hana Yoon (KIER) on 2D materials and advanced laser technology."
-  },
-  {
-    "date": "2026.04",
-    "type": "paper",
-    "text": "Our paper on anion–diluent dynamics in dual-ion batteries has been featured as a Front Cover in Advanced Materials."
-  },
-  {
-    "date": "2026.01",
-    "type": "paper",
-    "text": "Congrats! Gijung's paper has been accepted in Advanced Science (Anode)."
-  },
-  {
-    "date": "2026.01",
-    "type": "paper",
-    "text": "Our \"Dual-amide strategy for quaternary aqueous electrolytes\" has been featured as an Inside Back Cover in JMC A."
-  },
-  {
-    "date": "2026.01",
-    "type": "award",
-    "text": "Younsang was awarded the Excellent Award at the KECS Student Presentation Competition (우수상, 학생발표경진대회)."
-  },
-  {
-    "date": "2026.01",
-    "type": "misc",
-    "text": "Congrats! Gijung (MS graduate) joined LG Energy Solution."
-  },
-  {
-    "date": "2026.01",
-    "type": "paper",
-    "text": "Congrats! Jin Yong's paper has been accepted in Chemical Engineering Journal (Binder)."
-  },
-  {
-    "date": "2025.12",
-    "type": "paper",
-    "text": "Congrats! Younsang's paper has been accepted in Journal of Materials Chemistry A (Electrolyte)."
-  },
-  {
-    "date": "2025.11",
-    "type": "award",
-    "text": "조연상 학생이 한국장학재단 석사우수장학금 장학생으로 선정되었습니다."
-  },
-  {
-    "date": "2025.11",
-    "type": "paper",
-    "text": "Our recent work has been accepted in Advanced Materials (Electrolyte)."
-  },
-  {
-    "date": "2025.11",
-    "type": "welcome",
-    "text": "We hosted Prof. Onur Buyukcakir (IZTECH) sharing insights on organic electrode materials."
-  },
-  {
-    "date": "2025.11",
-    "type": "misc",
-    "text": "Our Operando XRD instrument (electrochemical reaction) has been finally installed."
-  },
-  {
-    "date": "2025.10",
-    "type": "paper",
-    "text": "Jin Yong's work has been accepted in Journal of Power Sources (Active materials)."
-  },
-  {
-    "date": "2025.10",
-    "type": "welcome",
-    "text": "Welcome aboard: Soo-Ah, Jaehee and Myeongsun as undergraduate interns."
-  },
-  {
-    "date": "2025.09",
-    "type": "award",
-    "text": "권진용 학생이 한국이공학진흥원 IPESK 차세대 공학리더에 선정되었습니다."
-  },
-  {
-    "date": "2025.09",
-    "type": "award",
-    "text": "권진용, 조연상 학생이 한국연구재단 박사·석사과정생 연구장려금지원사업에 선정되었습니다."
-  },
-  {
-    "date": "2025.07",
-    "type": "misc",
-    "text": "Prof. Ryu, Jin Yong, and Younsang attended the LG Energy Solution Industry–Academia Conference."
-  },
-  {
-    "date": "2025.07",
-    "type": "welcome",
-    "text": "Welcome aboard: Jimin, Hojeong as undergraduate interns."
-  },
-  {
-    "date": "2025.07",
-    "type": "paper",
-    "text": "Our recent work has been accepted in Advanced Science (Electrolyte)."
-  },
-  {
-    "date": "2025.06",
-    "type": "congrats",
-    "text": "Jin Jun has successfully defended his master's degree. Wishing you all the best!"
-  },
-  {
-    "date": "2025.06",
-    "type": "paper",
-    "text": "Our recent work has been accepted in Advanced Functional Materials (Anode–Binder)."
-  },
-  {
-    "date": "2025.06",
-    "type": "paper",
-    "text": "Gi Jung & Jun Jun's paper has been accepted in Chemical Communications (EL–ED interface)."
-  },
-  {
-    "date": "2025.04",
-    "type": "paper",
-    "text": "Our magnetically-controlled graphite alignment paper has been featured as a Frontispiece Cover in Small."
-  },
-  {
-    "date": "2025.04",
-    "type": "award",
-    "text": "Our \"Layering Charged Polymers\" paper was recognized as a Top Viewed Article in Advanced Functional Materials."
-  },
-  {
-    "date": "2025.04",
-    "type": "award",
-    "text": "Our group has been granted the Infrastructure Support for Young Scientists (NFEC, MSIT)."
-  },
-  {
-    "date": "2025.03",
-    "type": "paper",
-    "text": "Our recent work has been accepted in Advanced Science (Si anode / Binder / GPE)."
-  },
-  {
-    "date": "2025.02",
-    "type": "misc",
-    "text": "Our offices have been moved to R517 / R517A."
-  },
-  {
-    "date": "2024.12",
-    "type": "welcome",
-    "text": "Welcome aboard: Junsik, Subin, Yeonhee, and undergraduate interns Juhyung, Jaehun, Yesung, Taeyeon, Yujin, Eun Bee."
-  },
-  {
-    "date": "2024.12",
-    "type": "congrats",
-    "text": "Farewell and best wishes, Insu!"
-  },
-  {
-    "date": "2024.12",
-    "type": "paper",
-    "text": "Recent works accepted in Advanced Materials, Advanced Energy Materials, Advanced Science, and Small."
-  }
-]
+{
+  "items": [
+    {
+      "date": "2026.08",
+      "type": "welcome",
+      "text": "We hosted an invited talk from Prof. Sehwan Park (Kookmin U) on the cathode–SSE failure mechanism."
+    },
+    {
+      "date": "2026.07",
+      "type": "paper",
+      "text": "Congrats! Jin Yong and Younsang's paper has been accepted in Energy Materials (Interface)."
+    },
+    {
+      "date": "2026.07",
+      "type": "paper",
+      "text": "Congrats! Younsang's paper has been accepted in Journal of Energy Storage (Electrolyte)."
+    },
+    {
+      "date": "2026.06",
+      "type": "award",
+      "text": "권진용 학생이 한국장학재단 박사우수장학금 장학생(수도권 이공계열 400명 내외)으로 선정되었습니다."
+    },
+    {
+      "date": "2026.05",
+      "type": "award",
+      "text": "Our two papers have been recognized as \"Highly Cited Paper Award\" from Sogang University."
+    },
+    {
+      "date": "2026.04",
+      "type": "welcome",
+      "text": "We hosted an invited talk from Prof. Se Hun Joo (Sookmyung Women's U) on theoretical calculations and ML/AI for energy."
+    },
+    {
+      "date": "2026.04",
+      "type": "welcome",
+      "text": "We hosted an invited talk from Dr. Hana Yoon (KIER) on 2D materials and advanced laser technology."
+    },
+    {
+      "date": "2026.04",
+      "type": "paper",
+      "text": "Our paper on anion–diluent dynamics in dual-ion batteries has been featured as a Front Cover in Advanced Materials."
+    },
+    {
+      "date": "2026.01",
+      "type": "paper",
+      "text": "Congrats! Gijung's paper has been accepted in Advanced Science (Anode)."
+    },
+    {
+      "date": "2026.01",
+      "type": "paper",
+      "text": "Our \"Dual-amide strategy for quaternary aqueous electrolytes\" has been featured as an Inside Back Cover in JMC A."
+    },
+    {
+      "date": "2026.01",
+      "type": "award",
+      "text": "Younsang was awarded the Excellent Award at the KECS Student Presentation Competition (우수상, 학생발표경진대회)."
+    },
+    {
+      "date": "2026.01",
+      "type": "misc",
+      "text": "Congrats! Gijung (MS graduate) joined LG Energy Solution."
+    },
+    {
+      "date": "2026.01",
+      "type": "paper",
+      "text": "Congrats! Jin Yong's paper has been accepted in Chemical Engineering Journal (Binder)."
+    },
+    {
+      "date": "2025.12",
+      "type": "paper",
+      "text": "Congrats! Younsang's paper has been accepted in Journal of Materials Chemistry A (Electrolyte)."
+    },
+    {
+      "date": "2025.11",
+      "type": "award",
+      "text": "조연상 학생이 한국장학재단 석사우수장학금 장학생으로 선정되었습니다."
+    },
+    {
+      "date": "2025.11",
+      "type": "paper",
+      "text": "Our recent work has been accepted in Advanced Materials (Electrolyte)."
+    },
+    {
+      "date": "2025.11",
+      "type": "welcome",
+      "text": "We hosted Prof. Onur Buyukcakir (IZTECH) sharing insights on organic electrode materials."
+    },
+    {
+      "date": "2025.11",
+      "type": "misc",
+      "text": "Our Operando XRD instrument (electrochemical reaction) has been finally installed."
+    },
+    {
+      "date": "2025.10",
+      "type": "paper",
+      "text": "Jin Yong's work has been accepted in Journal of Power Sources (Active materials)."
+    },
+    {
+      "date": "2025.10",
+      "type": "welcome",
+      "text": "Welcome aboard: Soo-Ah, Jaehee and Myeongsun as undergraduate interns."
+    },
+    {
+      "date": "2025.09",
+      "type": "award",
+      "text": "권진용 학생이 한국이공학진흥원 IPESK 차세대 공학리더에 선정되었습니다."
+    },
+    {
+      "date": "2025.09",
+      "type": "award",
+      "text": "권진용, 조연상 학생이 한국연구재단 박사·석사과정생 연구장려금지원사업에 선정되었습니다."
+    },
+    {
+      "date": "2025.07",
+      "type": "misc",
+      "text": "Prof. Ryu, Jin Yong, and Younsang attended the LG Energy Solution Industry–Academia Conference."
+    },
+    {
+      "date": "2025.07",
+      "type": "welcome",
+      "text": "Welcome aboard: Jimin, Hojeong as undergraduate interns."
+    },
+    {
+      "date": "2025.07",
+      "type": "paper",
+      "text": "Our recent work has been accepted in Advanced Science (Electrolyte)."
+    },
+    {
+      "date": "2025.06",
+      "type": "congrats",
+      "text": "Jin Jun has successfully defended his master's degree. Wishing you all the best!"
+    },
+    {
+      "date": "2025.06",
+      "type": "paper",
+      "text": "Our recent work has been accepted in Advanced Functional Materials (Anode–Binder)."
+    },
+    {
+      "date": "2025.06",
+      "type": "paper",
+      "text": "Gi Jung & Jun Jun's paper has been accepted in Chemical Communications (EL–ED interface)."
+    },
+    {
+      "date": "2025.04",
+      "type": "paper",
+      "text": "Our magnetically-controlled graphite alignment paper has been featured as a Frontispiece Cover in Small."
+    },
+    {
+      "date": "2025.04",
+      "type": "award",
+      "text": "Our \"Layering Charged Polymers\" paper was recognized as a Top Viewed Article in Advanced Functional Materials."
+    },
+    {
+      "date": "2025.04",
+      "type": "award",
+      "text": "Our group has been granted the Infrastructure Support for Young Scientists (NFEC, MSIT)."
+    },
+    {
+      "date": "2025.03",
+      "type": "paper",
+      "text": "Our recent work has been accepted in Advanced Science (Si anode / Binder / GPE)."
+    },
+    {
+      "date": "2025.02",
+      "type": "misc",
+      "text": "Our offices have been moved to R517 / R517A."
+    },
+    {
+      "date": "2024.12",
+      "type": "welcome",
+      "text": "Welcome aboard: Junsik, Subin, Yeonhee, and undergraduate interns Juhyung, Jaehun, Yesung, Taeyeon, Yujin, Eun Bee."
+    },
+    {
+      "date": "2024.12",
+      "type": "congrats",
+      "text": "Farewell and best wishes, Insu!"
+    },
+    {
+      "date": "2024.12",
+      "type": "paper",
+      "text": "Recent works accepted in Advanced Materials, Advanced Energy Materials, Advanced Science, and Small."
+    }
+  ]
+}

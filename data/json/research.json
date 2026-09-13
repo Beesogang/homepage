@@ -1,41 +1,43 @@
-[
-  {
-    "title": "Electrode–Electrolyte Interface",
-    "subtitle": "Governing ion transport and interfacial stability",
-    "body": "The electrode–electrolyte interface (EEI) is arguably the most critical yet least controllable region in electrochemical energy storage. Charge transfer, ion desolvation, and SEI/CEI formation collectively govern reversibility, rate capability, and longevity. Uncontrolled interfacial reactions consume active lithium, generate resistive byproducts, and trigger parasitic electrolyte decomposition. We engineer the EEI through artificial SEI/CEI construction, additive design, solvation tuning, and surface coating — suppressing detrimental side reactions while promoting fast, uniform ion transport.",
-    "image": "assets/img/research/eei.jpg",
-    "refs": [
-      "Adv. Sci. 12, 2417243 (2025)"
-    ]
-  },
-  {
-    "title": "Electrolyte Solution Chemistry",
-    "subtitle": "Designing the ionic medium for stable, efficient transport",
-    "body": "The electrolyte simultaneously contacts both electrodes, so its composition and solvation structure are pivotal to cell performance. Beyond ionic conduction, it governs the thermodynamic and kinetic landscape of interfacial reactions. We manipulate coordination number, solvent activity, and ion pairing through solvent selection, salt concentration, and additive design — leveraging localized high-concentration electrolytes, weakly solvating solvents, and fluorinated systems to widen the stability window and enhance interfacial compatibility.",
-    "image": "assets/img/research/electrolyte.jpg",
-    "refs": [
-      "J. Energy Storage 127, 123604 (2026)",
-      "Adv. Mater. 38, e13832 (2026) — Front Cover",
-      "J. Mater. Chem. A 14, 3888 (2026) — Inside Back Cover",
-      "Adv. Sci. 12, e05982 (2025)",
-      "Adv. Mater. 37, 2412652 (2025)",
-      "Adv. Energy Mater. 14, 2402293 (2024)",
-      "J. Am. Chem. Soc. 146, 12984 (2024)"
-    ]
-  },
-  {
-    "title": "Composite Electrode Engineering",
-    "subtitle": "Harmonizing active materials, binders, and architecture",
-    "body": "The composite electrode is a multicomponent system where active materials, conductive additives, and polymeric binders must work in concert. Next-generation materials — alloying anodes (Si, Sn, P), conversion anodes, Ni-rich/Li-rich cathodes — offer far higher energy density but suffer severe structural deformation and interfacial reactions. We pursue atomic-scale material design alongside multifunctional stress-dissipating binders that redistribute mechanical loads, preserve conductive pathways, and direct stable interfacial films — especially critical in thick, high-areal-capacity electrodes where CMC, SBR, PVDF, and PAA fall short.",
-    "image": "assets/img/research/composite.jpg",
-    "refs": [
-      "Acc. Chem. Res. 56, 2213 (2023) — Front Cover",
-      "Chem. Eng. J. 527, 171667 (2026)",
-      "Adv. Funct. Mater. 35, e09445 (2025)",
-      "Energy Storage Mater. 65, 103176 (2024)",
-      "Adv. Mater. 35, 2306157 (2023)",
-      "Nature Commun. 10, 2351 (2019)",
-      "Science 357, 250 (2017)"
-    ]
-  }
-]
+{
+  "items": [
+    {
+      "title": "Electrode–Electrolyte Interface",
+      "subtitle": "Governing ion transport and interfacial stability",
+      "body": "The electrode–electrolyte interface (EEI) is arguably the most critical yet least controllable region in electrochemical energy storage. Charge transfer, ion desolvation, and SEI/CEI formation collectively govern reversibility, rate capability, and longevity. Uncontrolled interfacial reactions consume active lithium, generate resistive byproducts, and trigger parasitic electrolyte decomposition. We engineer the EEI through artificial SEI/CEI construction, additive design, solvation tuning, and surface coating — suppressing detrimental side reactions while promoting fast, uniform ion transport.",
+      "image": "assets/img/research/eei.jpg",
+      "refs": [
+        "Adv. Sci. 12, 2417243 (2025)"
+      ]
+    },
+    {
+      "title": "Electrolyte Solution Chemistry",
+      "subtitle": "Designing the ionic medium for stable, efficient transport",
+      "body": "The electrolyte simultaneously contacts both electrodes, so its composition and solvation structure are pivotal to cell performance. Beyond ionic conduction, it governs the thermodynamic and kinetic landscape of interfacial reactions. We manipulate coordination number, solvent activity, and ion pairing through solvent selection, salt concentration, and additive design — leveraging localized high-concentration electrolytes, weakly solvating solvents, and fluorinated systems to widen the stability window and enhance interfacial compatibility.",
+      "image": "assets/img/research/electrolyte.jpg",
+      "refs": [
+        "J. Energy Storage 127, 123604 (2026)",
+        "Adv. Mater. 38, e13832 (2026) — Front Cover",
+        "J. Mater. Chem. A 14, 3888 (2026) — Inside Back Cover",
+        "Adv. Sci. 12, e05982 (2025)",
+        "Adv. Mater. 37, 2412652 (2025)",
+        "Adv. Energy Mater. 14, 2402293 (2024)",
+        "J. Am. Chem. Soc. 146, 12984 (2024)"
+      ]
+    },
+    {
+      "title": "Composite Electrode Engineering",
+      "subtitle": "Harmonizing active materials, binders, and architecture",
+      "body": "The composite electrode is a multicomponent system where active materials, conductive additives, and polymeric binders must work in concert. Next-generation materials — alloying anodes (Si, Sn, P), conversion anodes, Ni-rich/Li-rich cathodes — offer far higher energy density but suffer severe structural deformation and interfacial reactions. We pursue atomic-scale material design alongside multifunctional stress-dissipating binders that redistribute mechanical loads, preserve conductive pathways, and direct stable interfacial films — especially critical in thick, high-areal-capacity electrodes where CMC, SBR, PVDF, and PAA fall short.",
+      "image": "assets/img/research/composite.jpg",
+      "refs": [
+        "Acc. Chem. Res. 56, 2213 (2023) — Front Cover",
+        "Chem. Eng. J. 527, 171667 (2026)",
+        "Adv. Funct. Mater. 35, e09445 (2025)",
+        "Energy Storage Mater. 65, 103176 (2024)",
+        "Adv. Mater. 35, 2306157 (2023)",
+        "Nature Commun. 10, 2351 (2019)",
+        "Science 357, 250 (2017)"
+      ]
+    }
+  ]
+}

@@ -449,12 +449,15 @@ async function loadData() {
     loadJSON("data/json/pi.json"),
     loadJSON("data/json/gallery.json"),
   ]);
-  if (Array.isArray(news))     NEWS = news;
-  if (Array.isArray(team))     TEAM = team;
+  // news/team/research/gallery 는 { "items": [...] } 구조. (구버전 배열도 호환)
+  const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : null);
+  const a_news = arr(news), a_team = arr(team), a_res = arr(research), a_gal = arr(gallery);
+  if (a_news) NEWS = a_news;
+  if (a_team) TEAM = a_team;
   if (pubs) { PUBLICATIONS = pubs.publications || PUBLICATIONS; BOOK_CHAPTERS = pubs.book_chapters || BOOK_CHAPTERS; }
-  if (Array.isArray(research)) RESEARCH_AREAS = research;
-  if (pi)                      PI = pi;
-  if (Array.isArray(gallery))  GALLERY = gallery;
+  if (a_res) RESEARCH_AREAS = a_res;
+  if (pi)    PI = pi;
+  if (a_gal) GALLERY = a_gal;
 }
 
 /* --------------------------------------------------- boot */
