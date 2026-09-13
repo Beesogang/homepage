@@ -1,0 +1,233 @@
+# =============================================================================
+#  BEE Lab — 콘텐츠 관리(CMS) 설정
+#  /admin 편집 화면이 "무엇을, 어떤 폼으로" 편집할지 정의합니다. 보통 건드릴 일 없음.
+# =============================================================================
+
+# 로그인 방식: Netlify Identity + Git Gateway (가장 쉬운 방식)
+backend:
+  name: git-gateway
+  branch: main
+
+# 편집 중 이미지 업로드 저장 위치
+media_folder: "assets/img/uploads"
+public_folder: "assets/img/uploads"
+
+locale: "en"
+
+collections:
+  # ---------------------------------------------------------------- 뉴스
+  - name: "news"
+    label: "소식 (News)"
+    files:
+      - name: "news"
+        label: "소식 목록"
+        file: "data/json/news.json"
+        editor: { preview: false }
+        fields:
+          - label: "소식 목록 (최신순으로 위에서부터)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} · {{fields.text}}"
+            fields:
+              - { label: "날짜 (YYYY.MM)", name: "date", widget: "string", hint: "예: 2026.09" }
+              - label: "종류"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "논문 (Paper)", value: "paper" }
+                  - { label: "수상·선정 (Award)", value: "award" }
+                  - { label: "합류·방문 (Welcome)", value: "welcome" }
+                  - { label: "축하 (News)", value: "congrats" }
+                  - { label: "기타 (Update)", value: "misc" }
+              - { label: "내용", name: "text", widget: "text" }
+
+  # ---------------------------------------------------------------- 팀원
+  - name: "team"
+    label: "팀원 (Team)"
+    files:
+      - name: "team"
+        label: "팀원 목록"
+        file: "data/json/team.json"
+        editor: { preview: false }
+        fields:
+          - label: "팀원 목록"
+            name: "members"
+            widget: "list"
+            summary: "{{fields.name}} ({{fields.role}})"
+            fields:
+              - label: "구분"
+                name: "role"
+                widget: "select"
+                options:
+                  - { label: "지도교수 (PI · Team페이지엔 미표시)", value: "pi" }
+                  - { label: "대학원생", value: "ms" }
+                  - { label: "박사과정", value: "phd" }
+                  - { label: "학부연구생", value: "ug" }
+                  - { label: "졸업생 (Alumni)", value: "alumni" }
+              - { label: "이름 (영문)", name: "name", widget: "string" }
+              - { label: "이름 (한글)", name: "nameKo", widget: "string", required: false }
+              - { label: "태그 (예: Chief)", name: "tag", widget: "string", required: false }
+              - { label: "이메일", name: "email", widget: "string", required: false }
+              - { label: "연구 분야", name: "research", widget: "string", required: false }
+              - { label: "사진", name: "photo", widget: "image", required: false, hint: "비우면 이름 이니셜이 표시됩니다." }
+              - label: "비고 (수상·논문 등)"
+                name: "notes"
+                widget: "list"
+                required: false
+                field: { label: "항목", name: "item", widget: "string" }
+              - { label: "재직 기간 (졸업생용, 예: MS / 23.09–25.08)", name: "period", widget: "string", required: false }
+              - { label: "현재 소속 (졸업생용)", name: "current", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- 논문
+  - name: "publications"
+    label: "논문 (Publications)"
+    files:
+      - name: "publications"
+        label: "논문 목록"
+        file: "data/json/publications.json"
+        editor: { preview: false }
+        fields:
+          - label: "논문 목록"
+            name: "publications"
+            widget: "list"
+            summary: "{{fields.num}} · {{fields.title}}"
+            fields:
+              - { label: "번호", name: "num", widget: "string", required: false, hint: "미정이면 비워두세요." }
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "저자", name: "authors", widget: "text", hint: "공동1저자 †, 교신저자 * 표기" }
+              - { label: "저널·권·호·연도", name: "venue", widget: "string" }
+              - { label: "연도(숫자)", name: "year", widget: "number", value_type: "int", min: 2000, max: 2100 }
+              - label: "상태"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "게재됨 (Published)", value: "published" }
+                  - { label: "수정 중 (In revision)", value: "revision" }
+                  - { label: "투고됨 (Submitted)", value: "submitted" }
+                  - { label: "준비 중 (In preparation)", value: "inprep" }
+              - { label: "DOI 링크", name: "doi", widget: "string", required: false }
+              - { label: "IF·JCR (예: IF=26.8, JCR Top 2.1%)", name: "impact", widget: "string", required: false }
+              - label: "표지·수상 태그 (예: Front Cover)"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "태그", name: "tag", widget: "string" }
+              - { label: "오픈액세스", name: "openAccess", widget: "boolean", required: false, default: false }
+              - label: "언론 보도"
+                name: "press"
+                widget: "list"
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "매체명", name: "name", widget: "string" }
+                  - { label: "링크", name: "url", widget: "string" }
+          - label: "책 챕터 (Book Chapters)"
+            name: "book_chapters"
+            widget: "list"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "저자", name: "authors", widget: "string" }
+              - { label: "책·챕터", name: "book", widget: "string" }
+              - { label: "출판사·연도", name: "publisher", widget: "string" }
+
+  # ---------------------------------------------------------------- 연구
+  - name: "research"
+    label: "연구 분야 (Research)"
+    files:
+      - name: "research"
+        label: "연구 분야"
+        file: "data/json/research.json"
+        editor: { preview: false }
+        fields:
+          - label: "연구 분야 목록"
+            name: "areas"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "제목", name: "title", widget: "string" }
+              - { label: "부제", name: "subtitle", widget: "string" }
+              - { label: "설명", name: "body", widget: "text" }
+              - { label: "이미지", name: "image", widget: "image", required: false }
+              - label: "대표 논문 (Relevant publications)"
+                name: "refs"
+                widget: "list"
+                required: false
+                field: { label: "논문", name: "ref", widget: "string" }
+
+  # ---------------------------------------------------------------- 갤러리
+  - name: "gallery"
+    label: "갤러리 (Gallery)"
+    files:
+      - name: "gallery"
+        label: "갤러리 사진"
+        file: "data/json/gallery.json"
+        editor: { preview: false }
+        fields:
+          - label: "사진 목록 (최신순)"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: "사진", name: "src", widget: "image" }
+              - { label: "설명", name: "caption", widget: "string", required: false }
+              - { label: "날짜 (예: 2025.06)", name: "date", widget: "string", required: false }
+
+  # ---------------------------------------------------------------- PI
+  - name: "pi"
+    label: "PI 정보"
+    files:
+      - name: "pi"
+        label: "PI 프로필"
+        file: "data/json/pi.json"
+        editor: { preview: false }
+        fields:
+          - { label: "이름", name: "name", widget: "string" }
+          - { label: "직함", name: "title", widget: "string" }
+          - { label: "학과", name: "dept", widget: "string" }
+          - { label: "소속기관", name: "institute", widget: "string" }
+          - { label: "대학", name: "university", widget: "string" }
+          - { label: "Office", name: "office", widget: "string" }
+          - { label: "Lab", name: "lab", widget: "string" }
+          - { label: "전화", name: "phone", widget: "string" }
+          - { label: "이메일", name: "email", widget: "string" }
+          - { label: "전문 분야", name: "expertise", widget: "string" }
+          - { label: "사진", name: "photo", widget: "image", required: false }
+          - label: "외부 링크"
+            name: "links"
+            widget: "object"
+            fields:
+              - { label: "Google Scholar", name: "scholar", widget: "string", required: false }
+              - { label: "LinkedIn", name: "linkedin", widget: "string", required: false }
+              - { label: "ORCID", name: "orcid", widget: "string", required: false }
+          - label: "경력 (Appointments)"
+            name: "appointments"
+            widget: "list"
+            required: false
+            field: { label: "연도 | 내용", name: "row", widget: "string", hint: "예: 2026–Present | Associate Professor …" }
+          - label: "학력 (Education)"
+            name: "education"
+            widget: "list"
+            required: false
+            field: { label: "연도 | 내용", name: "row", widget: "string" }
+          - label: "수상 (Awards)"
+            name: "awards"
+            widget: "list"
+            required: false
+            field: { label: "연도 | 내용", name: "row", widget: "string" }
+          - label: "활동 (Activities)"
+            name: "activities"
+            widget: "list"
+            required: false
+            field: { label: "연도 | 내용", name: "row", widget: "string" }
+          - label: "강의 (Teaching)"
+            name: "teaching"
+            widget: "list"
+            required: false
+            field: { label: "과목", name: "course", widget: "string" }
+          - label: "대표 논문 (Selected)"
+            name: "selected"
+            widget: "list"
+            required: false
+            field: { label: "제목 | 저널", name: "row", widget: "string" }

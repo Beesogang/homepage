@@ -1,0 +1,5 @@
+# Netlify 배포 설정
+# 배포할 때마다 build-data.js 를 실행해 data/json/*.json → data/data.js 를 동기화합니다.
+[build]
+  command = "node build-data.js"
+  publish = "."

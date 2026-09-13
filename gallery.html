@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery — BEE Lab | Sogang University</title>
+  <meta name="description" content="Life at BEE Lab — group photos, events, and moments in the lab.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-active="gallery.html">
+
+  <section class="page-intro">
+    <div class="wrap">
+      <div class="eyebrow mono">Gallery</div>
+      <h1>Life at BEE Lab.</h1>
+      <p>Group photos, seminars, conferences, and everyday moments in the lab.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div id="gallery-root"></div>
+    </div>
+  </section>
+
+  <script src="data/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>window.__PAGE_INIT__ = () => renderGallery("gallery-root");</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "name": "Jaegeon Ryu, Ph.D.",
+  "title": "Associate Professor",
+  "dept": "Department of Chemical & Biomolecular Engineering",
+  "institute": "Institute of Energy and Environment",
+  "university": "Sogang University, Seoul 04107, South Korea",
+  "office": "R517A (리치과학관 517A호)",
+  "lab": "RA306B (리치별관 306B호)",
+  "phone": "+82-2-705-8482",
+  "email": "jryu@sogang.ac.kr",
+  "expertise": "Materials Chemistry, Electrochemistry, Electrochemical Analysis",
+  "photo": "assets/img/pi.jpg",
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=4YCWJb8AAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/jaegeon-ryu-6a344419a/",
+    "orcid": "https://orcid.org/0000-0002-5290-6192"
+  },
+  "appointments": [
+    "2026–Present | Associate Professor, Chemical & Biomolecular Engineering, Sogang University",
+    "2022–2026 | Assistant Professor, Chemical & Biomolecular Engineering, Sogang University",
+    "2020–2022 | Research Associate, PNNL (Dr. Yuyan Shao, Dr. Jie Xiao)",
+    "2018–2020 | Research Associate, Department of Chemistry, PRI, POSTECH (Prof. Soojin Park)",
+    "2015–2016 | Visiting Scholar, PNNL (Dr. Chongmin Wang, Dr. Ji-Guang Zhang)"
+  ],
+  "education": [
+    "2013–2018 | Ph.D. in Energy and Chemical Engineering, UNIST (Prof. Soojin Park) — Selected as best graduate (3 of 116)",
+    "2010–2013 | B.S. in Energy and Chemical Engineering, UNIST (Prof. Byeong-Su Kim) — Early graduation, Summa Cum Laude, 2nd place"
+  ],
+  "awards": [
+    "2026 | Highly Cited Paper Award",
+    "2024 | 서강대학교 교육업적 우수 교원 선정",
+    "2023.10 | Toray Fellowship, Korea Toray Science Foundation",
+    "2023.05 | Miwon Young Scientist Award (미원상사신진과학자상), KSEIC",
+    "2019.02 | UNIST Best Research Award (Thesis Award)",
+    "2018.11 | Graduate Excellence Award (Grand Prize), UNIST",
+    "2016–2018 | IASSF Best Young Researcher (최우수 신진연구자), KAST",
+    "2017.04 | Dow Chemical Best Paper Award (Grand Prize), KCS"
+  ],
+  "activities": [
+    "2026– | NEXT국가전략 소재 R&D 기획위원, 소재혁신선도본부",
+    "2026– | 고분자 과학과 기술 편집위원, 한국고분자학회",
+    "2023– | 공업화학전망 편집위원, 한국공업화학회",
+    "2024–2025 | 소재 분야 국가기술 전략센터 기술자문위원회 (이차전지)",
+    "2024– | Editorial Board Member, Discover Electrochemistry (Springer Nature)",
+    "2026– | Editorial Board Member, Energies · Batteries (MDPI)",
+    "2018– | Peer Reviewer (ACS Nano, Nano Lett., AM, AEM, AFM, JMC A/C, EES, ESM, Nat. Commun., etc.)"
+  ],
+  "teaching": [
+    "Creative Design (창의설계)",
+    "Elementary Principles in Chemical Engineering (화공생명공학양론)",
+    "Applied Mathematics (화공수학 I)",
+    "Fluid Mechanics for Chemical Engineers (화공유체역학)",
+    "Reaction Engineering (반응공학)",
+    "Secondary Battery Engineering (이차전지공학)",
+    "화공생명공학특론 I / 고급화공생명공학"
+  ],
+  "selected": [
+    "Comprehensive Understanding of Accelerated Kinetics … in Dual-Ion Batteries | Advanced Materials 38, e13832 (2026)",
+    "Charge Separation Induced by Asymmetric Surface Charge Effects … | Advanced Energy Materials 14, 2402293 (2024)",
+    "Azacyclic Anchor-Enabled Cohesive Graphite Electrodes … | Advanced Materials 35, 2306157 (2023)",
+    "Infinitesimal sulfur fusion yields quasi-metallic bulk silicon … | Nature Communications 10, 2351 (2019)",
+    "Mechanical mismatch-driven rippling in carbon-coated silicon sheets … | Nature Communications 9, 2924 (2018)"
+  ]
+}
