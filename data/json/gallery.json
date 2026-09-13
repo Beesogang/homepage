@@ -1,3 +1,9 @@
 {
-  "items": []
+  "items": [
+    {
+      "src": "assets/img/uploads/image-1-.jpg",
+      "caption": "Group dinner",
+      "date": "2026.08"
+    }
+  ]
 }
