@@ -6,11 +6,6 @@
       "date": "2026.08"
     },
     {
-      "src": "assets/img/uploads/kakaotalk_20221101_145720161_05.jpg",
-      "caption": "First group shot",
-      "date": "2022.11"
-    },
-    {
       "src": "assets/img/uploads/unnamed.jpg",
       "caption": "4th SGU-NTU ChemE Sympsium@NTU",
       "date": "2023.02"
@@ -19,6 +14,16 @@
       "src": "assets/img/uploads/microsoftteams-image-14-.png",
       "caption": "2023S commencement (Jin Yong Kwon)",
       "date": "2023.02"
+    },
+    {
+      "src": "assets/img/uploads/kakaotalk_20221101_145720161_05.jpg",
+      "caption": "First group shot",
+      "date": "2022.11"
+    },
+    {
+      "src": "assets/img/uploads/microsoftteams-image-2-.png",
+      "caption": "Prof. Ryu's Birthday",
+      "date": "2023.03"
     }
   ]
 }
