@@ -416,31 +416,25 @@ function renderGallery(mountId) {
 }
 
 /* --------------------------------------------------- data loading */
-// 데이터 소스는 두 가지를 함께 지원합니다:
-//  1) 온라인(웹서버/Netlify): data/json/*.json 을 fetch → /admin(CMS) 편집이 즉시 반영
-//  2) 로컬 더블클릭(file://): fetch가 막히면 data/data.js 의 window.* 값으로 폴백
-// 따라서 온라인에서는 CMS 편집이 반영되고, 로컬에서도 내용이 보입니다.
-let NEWS          = window.NEWS          || [];
-let TEAM          = window.TEAM          || [];
-let PUBLICATIONS  = window.PUBLICATIONS  || [];
-let BOOK_CHAPTERS = window.BOOK_CHAPTERS || [];
-let RESEARCH_AREAS= window.RESEARCH_AREAS|| [];
-let PI            = window.PI            || null;
-let GALLERY       = window.GALLERY       || [];
+// 데이터는 data/json/*.json 에서 불러옵니다. (/admin 편집 화면이 이 파일들을 수정)
+// 온라인(웹서버/Netlify)에서 동작합니다. 로컬에서 미리보려면 웹서버로 여세요:
+//   python3 -m http.server 8000  →  http://localhost:8000
+let NEWS = [], TEAM = [], PUBLICATIONS = [], BOOK_CHAPTERS = [],
+    RESEARCH_AREAS = [], PI = null, GALLERY = [];
 
 async function loadJSON(path) {
   try {
-    const r = await fetch(path, { cache: "no-store" });
+    // 캐시 방지: 매 배포 후 최신 데이터를 확실히 읽도록 타임스탬프 쿼리 추가
+    const r = await fetch(path + "?t=" + Date.now(), { cache: "no-store" });
     if (!r.ok) throw new Error(r.status);
     return await r.json();
   } catch (e) {
-    return null; // 실패 시 폴백 유지
+    console.warn("데이터 로드 실패:", path, e.message);
+    return null;
   }
 }
 
 async function loadData() {
-  // file:// 에서는 fetch가 대부분 실패하므로 시도조차 건너뜀 → data.js 폴백 사용
-  if (location.protocol === "file:") return;
   const [news, team, pubs, research, pi, gallery] = await Promise.all([
     loadJSON("data/json/news.json"),
     loadJSON("data/json/team.json"),
@@ -450,14 +444,13 @@ async function loadData() {
     loadJSON("data/json/gallery.json"),
   ]);
   // news/team/research/gallery 는 { "items": [...] } 구조. (구버전 배열도 호환)
-  const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : null);
-  const a_news = arr(news), a_team = arr(team), a_res = arr(research), a_gal = arr(gallery);
-  if (a_news) NEWS = a_news;
-  if (a_team) TEAM = a_team;
-  if (pubs) { PUBLICATIONS = pubs.publications || PUBLICATIONS; BOOK_CHAPTERS = pubs.book_chapters || BOOK_CHAPTERS; }
-  if (a_res) RESEARCH_AREAS = a_res;
-  if (pi)    PI = pi;
-  if (a_gal) GALLERY = a_gal;
+  const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : []);
+  NEWS = arr(news);
+  TEAM = arr(team);
+  if (pubs) { PUBLICATIONS = pubs.publications || []; BOOK_CHAPTERS = pubs.book_chapters || []; }
+  RESEARCH_AREAS = arr(research);
+  if (pi) PI = pi;
+  GALLERY = arr(gallery);
 }
 
 /* --------------------------------------------------- boot */
