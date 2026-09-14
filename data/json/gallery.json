@@ -1,9 +1,14 @@
 {
   "items": [
     {
-      "src": "assets/img/uploads/image-1-.jpg",
-      "caption": "Group dinner",
+      "src": "assets/img/uploads/박세환교수세미나.jpg",
+      "caption": "Seminar#4 from Prof. Se Hwan Park (Kookmin U)",
       "date": "2026.08"
+    },
+    {
+      "caption": "Group dinner",
+      "date": "2026.08",
+      "src": "assets/img/uploads/2026-여름회식.jpg"
     },
     {
       "caption": "1st BEE Workshop",
