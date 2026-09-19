@@ -85,9 +85,9 @@
       "num": "",
       "title": "Deciphering Roles of Interfacial Tunable Primer for Nearly 100% Silicon Electrodes",
       "authors": "Jin Yong Kwon†, Jihong Lyu†, Junsu Son†, Seung Hwi Han, Gijung Han, Dong-Yeob Han, Jaehee Han, Gyuri Kim, Hyungmin Park, Tae Kyung Lee*, Jin Chul Kim*, Jaegeon Ryu*",
-      "venue": "Submitted, 2026",
+      "venue": "2026",
       "year": 2026,
-      "status": "submitted"
+      "status": "revision"
     },
     {
       "num": "",
@@ -108,15 +108,15 @@
       "impact": "IF=19.9, JCR Top 4.2%"
     },
     {
-      "num": "70",
-      "title": "Spatially Resolved Modulation of the Electrode–Electrolyte Interface in High Li-stoichiometric Battery Anodes",
-      "authors": "Jin Yong Kwon†, Younsang Cho†, Gijung Lee†, Dong-Yeob Han*, Jaegeon Ryu*",
-      "venue": "Energy Materials, 2026, 6, 600085",
-      "year": 2026,
-      "status": "published",
-      "doi": "https://www.oaepublish.com/articles/energymater.2026.42",
       "impact": "IF=11.9, JCR Top 10.7%",
-      "openAccess": true
+      "num": "70",
+      "authors": "Jin Yong Kwon†, Younsang Cho†, Gijung Lee†, Dong-Yeob Han*, Jaegeon Ryu*",
+      "openAccess": true,
+      "venue": "Energy Materials, 2026, 6, 600085",
+      "status": "published",
+      "title": "Spatially Resolved Modulation of the Electrode–Electrolyte Interface in High Li-stoichiometric Battery Anodes",
+      "year": 2026,
+      "doi": "https://www.oaepublish.com/articles/energymater.2026.42"
     },
     {
       "num": "69",
@@ -129,39 +129,31 @@
       "impact": "IF=10.7, JCR Top 14.9%"
     },
     {
-      "num": "68",
-      "title": "Unraveling Hydride-Driven Multiphasic Reduction Toward Tunable Germanium Structures for Lithium-Ion Batteries",
-      "authors": "Gijung Lee†, Jieun Kang†, Jin Yong Kwon, Woori Bae, Noh-Moon Lee, Byeongho Park, Yujin Park, Hyungmin Park, Changwan Sun, Jihee Yoon, Bonjae Koo, Jin Woo Yi*, Jaegeon Ryu*",
-      "venue": "Advanced Science, 2026, 13(22), e74278",
-      "year": 2026,
-      "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.74278",
       "impact": "IF=14.1, JCR Top 7.1%",
-      "openAccess": true
+      "num": "68",
+      "authors": "Gijung Lee†, Jieun Kang†, Jin Yong Kwon, Woori Bae, Noh-Moon Lee, Byeongho Park, Yujin Park, Hyungmin Park, Changwan Sun, Jihee Yoon, Bonjae Koo, Jin Woo Yi*, Jaegeon Ryu*",
+      "openAccess": true,
+      "venue": "Advanced Science, 2026, 13(22), e74278",
+      "status": "published",
+      "title": "Unraveling Hydride-Driven Multiphasic Reduction Toward Tunable Germanium Structures for Lithium-Ion Batteries",
+      "year": 2026,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.74278"
     },
     {
-      "num": "67",
-      "title": "Comprehensive Understanding of Accelerated Kinetics Driven by Anion–Diluent Dynamics Enabling Wide Temperature Operation in Dual-Ion Batteries",
-      "authors": "Sungho Kim†, Youngbi Kim†, Heejae Yang, Dongjoo Kim, Jieun Kang, Dokyung Kim, Young Joo Lee, Jeong Woo Han*, Jaegeon Ryu*, Soojin Park*",
-      "venue": "Advanced Materials, 2026, 38(19), e13832",
-      "year": 2026,
-      "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513832",
       "impact": "IF=26.8, JCR Top 2.1%",
+      "num": "67",
+      "authors": "Sungho Kim†, Youngbi Kim†, Heejae Yang, Dongjoo Kim, Jieun Kang, Dokyung Kim, Young Joo Lee, Jeong Woo Han*, Jaegeon Ryu*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Advanced Materials, 2026, 38(19), e13832",
+      "status": "published",
+      "title": "Comprehensive Understanding of Accelerated Kinetics Driven by Anion–Diluent Dynamics Enabling Wide Temperature Operation in Dual-Ion Batteries",
       "tags": [
         "Front Cover"
       ],
-      "openAccess": true
+      "year": 2026,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513832"
     },
     {
-      "num": "66",
-      "title": "Dual Dynamic Network Architecture Toward Circular Utilization of Bulk Si-based Anodes for Sustainable Li-ion Batteries",
-      "authors": "Jin Yong Kwon†, Jihong Lyu†, Jin Jun Heo, Seung Hui Han, Eunbee Kim, Hyungmin Park, Jin Chul Kim*, Jaegeon Ryu*",
-      "venue": "Chemical Engineering Journal, 2026, 527, 171667",
-      "year": 2026,
-      "status": "published",
-      "doi": "https://www.sciencedirect.com/science/article/abs/pii/S138589472512514X",
-      "impact": "IF=13.2, JCR Top 3.0%",
       "press": [
         {
           "name": "MSN News",
@@ -179,20 +171,17 @@
           "name": "교수신문",
           "url": "https://www.kyosu.net/news/articleView.html?idxno=154392"
         }
-      ]
+      ],
+      "impact": "IF=13.2, JCR Top 3.0%",
+      "num": "66",
+      "authors": "Jin Yong Kwon†, Jihong Lyu†, Jin Jun Heo, Seung Hui Han, Eunbee Kim, Hyungmin Park, Jin Chul Kim*, Jaegeon Ryu*",
+      "venue": "Chemical Engineering Journal, 2026, 527, 171667",
+      "status": "published",
+      "title": "Dual Dynamic Network Architecture Toward Circular Utilization of Bulk Si-based Anodes for Sustainable Li-ion Batteries",
+      "year": 2026,
+      "doi": "https://www.sciencedirect.com/science/article/abs/pii/S138589472512514X"
     },
     {
-      "num": "65",
-      "title": "Dual-Amide Strategy for Quaternary Aqueous Electrolytes",
-      "authors": "Insu Jeong†, Younsang Cho†, Youngbi Kim†, Hyungmin Park, Jeong Woo Han*, Soojin Park*, Jaegeon Ryu*",
-      "venue": "Journal of Materials Chemistry A, 2026, 14(7), 3888–3896",
-      "year": 2026,
-      "status": "published",
-      "doi": "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d5ta08103c",
-      "impact": "IF=9.5, JCR Top 13.6%",
-      "tags": [
-        "Inside Back Cover"
-      ],
       "press": [
         {
           "name": "이뉴스투데이",
@@ -206,7 +195,18 @@
           "name": "한겨레",
           "url": "https://www.hani.co.kr/arti/economy/biznews/1235490.html"
         }
-      ]
+      ],
+      "impact": "IF=9.5, JCR Top 13.6%",
+      "num": "65",
+      "authors": "Insu Jeong†, Younsang Cho†, Youngbi Kim†, Hyungmin Park, Jeong Woo Han*, Soojin Park*, Jaegeon Ryu*",
+      "venue": "Journal of Materials Chemistry A, 2026, 14(7), 3888–3896",
+      "status": "published",
+      "title": "Dual-Amide Strategy for Quaternary Aqueous Electrolytes",
+      "tags": [
+        "Inside Back Cover"
+      ],
+      "year": 2026,
+      "doi": "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d5ta08103c"
     },
     {
       "num": "64",
@@ -219,26 +219,26 @@
       "impact": "IF=7.9, JCR Top 14.8%"
     },
     {
-      "num": "63",
-      "title": "Dual-ionic Weakly Solvating Electrolyte Design Enables Efficient Fast-Cycling of Anion Shuttle Batteries",
-      "authors": "Jieun Kang, Inhui Lee, Gwonho Yu, Jin Jun Heo, Yuri Choi, Sangyeop Lee, Sungho Kim, Dongjoo Kim, Jungki Ryu, Seoin Back*, Soojin Park*, Jaegeon Ryu*",
-      "venue": "Advanced Science, 2025, 12(39), e05982",
-      "year": 2025,
-      "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202505982",
       "impact": "IF=14.1, JCR Top 7.1%",
-      "openAccess": true
+      "num": "63",
+      "authors": "Jieun Kang, Inhui Lee, Gwonho Yu, Jin Jun Heo, Yuri Choi, Sangyeop Lee, Sungho Kim, Dongjoo Kim, Jungki Ryu, Seoin Back*, Soojin Park*, Jaegeon Ryu*",
+      "openAccess": true,
+      "venue": "Advanced Science, 2025, 12(39), e05982",
+      "status": "published",
+      "title": "Dual-ionic Weakly Solvating Electrolyte Design Enables Efficient Fast-Cycling of Anion Shuttle Batteries",
+      "year": 2025,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202505982"
     },
     {
-      "num": "62",
-      "title": "Molecular Engineering of Coacervate Network Binders for Stable Silicon Anodes in Lithium-ion Batteries",
-      "authors": "Dong-Yeob Han†, Im Kyung Han†, Junsu Song†, Jin Yong Kwon, Tae Kyung Lee*, Soojin Park*, Jaegeon Ryu*",
-      "venue": "Advanced Functional Materials, 2025, 35(51), e09445",
-      "year": 2025,
-      "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202509445",
       "impact": "IF=19.0, JCR Top 4.5%",
-      "openAccess": true
+      "num": "62",
+      "authors": "Dong-Yeob Han†, Im Kyung Han†, Junsu Song†, Jin Yong Kwon, Tae Kyung Lee*, Soojin Park*, Jaegeon Ryu*",
+      "openAccess": true,
+      "venue": "Advanced Functional Materials, 2025, 35(51), e09445",
+      "status": "published",
+      "title": "Molecular Engineering of Coacervate Network Binders for Stable Silicon Anodes in Lithium-ion Batteries",
+      "year": 2025,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202509445"
     },
     {
       "num": "61",
@@ -251,15 +251,6 @@
       "impact": "IF=4.2, JCR Top 34.9%"
     },
     {
-      "num": "60",
-      "title": "Covalently Interlocked Electrode–Electrolyte Interface for High-Energy-Density Quasi-Solid-State Lithium-Ion Batteries",
-      "authors": "Dong-Yeob Han†, Imkyung Han†, Jin Yong Kwon, Seoha Nam, Saehyun Kim, Youngjin Song, Yeongseok Kim, Youn Soo Kim, Soojin Park*, Jaegeon Ryu*",
-      "venue": "Advanced Science, 2025, 12(22), 2417143",
-      "year": 2025,
-      "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202417143",
-      "impact": "IF=14.1, JCR Top 7.1%",
-      "openAccess": true,
       "press": [
         {
           "name": "전자신문",
@@ -273,7 +264,16 @@
           "name": "EurekAlert",
           "url": "https://www.eurekalert.org/news-releases/1083666"
         }
-      ]
+      ],
+      "impact": "IF=14.1, JCR Top 7.1%",
+      "num": "60",
+      "authors": "Dong-Yeob Han†, Imkyung Han†, Jin Yong Kwon, Seoha Nam, Saehyun Kim, Youngjin Song, Yeongseok Kim, Youn Soo Kim, Soojin Park*, Jaegeon Ryu*",
+      "openAccess": true,
+      "venue": "Advanced Science, 2025, 12(22), 2417143",
+      "status": "published",
+      "title": "Covalently Interlocked Electrode–Electrolyte Interface for High-Energy-Density Quasi-Solid-State Lithium-Ion Batteries",
+      "year": 2025,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202417143"
     },
     {
       "num": "59",
@@ -286,39 +286,39 @@
       "impact": "IF=26.8, JCR Top 2.1%"
     },
     {
+      "impact": "IF=12.1, JCR Top 7.2%",
       "num": "58",
-      "title": "Magnetically-Controlled Graphite Alignment for Fast and Stable Anion Intercalation",
       "authors": "Jieun Kang, Youngjin Song, Sungho Kim, Dong-Yeob Han, Jaegeon Ryu*, Soojin Park*",
       "venue": "Small, 2025, 21(17), 2409114",
-      "year": 2025,
       "status": "published",
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202409114",
-      "impact": "IF=12.1, JCR Top 7.2%",
+      "title": "Magnetically-Controlled Graphite Alignment for Fast and Stable Anion Intercalation",
       "tags": [
         "Frontispiece Cover"
-      ]
-    },
-    {
-      "num": "57",
-      "title": "Metal-Mediated Chlorine Transfer for Molten Salt-Driven Thermodynamic Change on Silicon Production",
-      "authors": "Minjun Je†, Jin Chul Kim†, Jiyeon Kim, Sungho Kim, Sunmin Ryu, Jaegeon Ryu*, Sang Kyu Kwak*, Soojin Park*",
-      "venue": "Advanced Science, 2025, 12(4), 2412239",
+      ],
       "year": 2025,
-      "status": "published",
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/advs.202412239",
-      "impact": "IF=14.1, JCR Top 7.1%",
-      "openAccess": true
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202409114"
     },
     {
-      "num": "56",
-      "title": "Charge Separation Induced by Asymmetric Surface Charge Effects in Quasi-solid State Electrolyte for Sustainable Anion Storage",
-      "authors": "Sungho Kim†, Dongjoo Kim†, Youngbi Kim†, Heejae Yang, Hojung Lee, Jieun Kang, Jihoon Han, Youn Soo Kim, Jaegeon Ryu*, Jeong Woo Han*, Soojin Park*",
-      "venue": "Advanced Energy Materials, 2024, 14(47), 2402293",
-      "year": 2024,
+      "impact": "IF=14.1, JCR Top 7.1%",
+      "num": "57",
+      "authors": "Minjun Je†, Jin Chul Kim†, Jiyeon Kim, Sungho Kim, Sunmin Ryu, Jaegeon Ryu*, Sang Kyu Kwak*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Advanced Science, 2025, 12(4), 2412239",
       "status": "published",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202402293",
+      "title": "Metal-Mediated Chlorine Transfer for Molten Salt-Driven Thermodynamic Change on Silicon Production",
+      "year": 2025,
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/advs.202412239"
+    },
+    {
       "impact": "IF=24.4, JCR Top 2.6%",
-      "openAccess": true
+      "num": "56",
+      "authors": "Sungho Kim†, Dongjoo Kim†, Youngbi Kim†, Heejae Yang, Hojung Lee, Jieun Kang, Jihoon Han, Youn Soo Kim, Jaegeon Ryu*, Jeong Woo Han*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Advanced Energy Materials, 2024, 14(47), 2402293",
+      "status": "published",
+      "title": "Charge Separation Induced by Asymmetric Surface Charge Effects in Quasi-solid State Electrolyte for Sustainable Anion Storage",
+      "year": 2024,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202402293"
     },
     {
       "num": "55",
@@ -363,17 +363,17 @@
       "impact": "IF=3.9, JCR Top 31%"
     },
     {
+      "impact": "IF=15.0, JCR Top 5.9%",
       "num": "51",
-      "title": "Customizing Polymeric Binders for Advanced Lithium Batteries: Design Principles and Beyond",
       "authors": "Jieun Kang†, Jin Yong Kwon†, Dong-Yeob Han†, Soojin Park*, Jaegeon Ryu*",
       "venue": "Applied Physics Reviews, 2024, 11, 011315",
-      "year": 2024,
       "status": "published",
-      "doi": "https://pubs.aip.org/aip/apr/article/11/1/011315/3268728",
-      "impact": "IF=15.0, JCR Top 5.9%",
+      "title": "Customizing Polymeric Binders for Advanced Lithium Batteries: Design Principles and Beyond",
       "tags": [
         "Featured Article"
-      ]
+      ],
+      "year": 2024,
+      "doi": "https://pubs.aip.org/aip/apr/article/11/1/011315/3268728"
     },
     {
       "num": "50",
@@ -396,15 +396,6 @@
       "impact": "IF=8.9, JCR Top 14.1%"
     },
     {
-      "num": "48",
-      "title": "Azacyclic Anchor-Enabled Cohesive Graphite Electrodes for Sustainable Anion Storage",
-      "authors": "Jieun Kang†, Seungho Lee†, Jinwoo Hwang†, Sungho Kim, Sangyeop Lee, Seokkeun Yoo, Jeong Woo Han*, Ja-Hyung Ryu*, Jaegeon Ryu*, Soojin Park*",
-      "venue": "Advanced Materials, 2023, 35(47), 2306157",
-      "year": 2023,
-      "status": "published",
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202306157",
-      "impact": "IF=29.4, JCR Top 2.1%",
-      "openAccess": true,
       "press": [
         {
           "name": "동아사이언스",
@@ -418,21 +409,30 @@
           "name": "Etnews",
           "url": "https://www.etnews.com/20231024000015"
         }
-      ]
+      ],
+      "impact": "IF=29.4, JCR Top 2.1%",
+      "num": "48",
+      "authors": "Jieun Kang†, Seungho Lee†, Jinwoo Hwang†, Sungho Kim, Sangyeop Lee, Seokkeun Yoo, Jeong Woo Han*, Ja-Hyung Ryu*, Jaegeon Ryu*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Advanced Materials, 2023, 35(47), 2306157",
+      "status": "published",
+      "title": "Azacyclic Anchor-Enabled Cohesive Graphite Electrodes for Sustainable Anion Storage",
+      "year": 2023,
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202306157"
     },
     {
-      "num": "47",
-      "title": "Constructing Pure Si Anodes for Advanced Lithium Batteries",
-      "authors": "Minjun Je†, Dong-Yeob Han†, Jaegeon Ryu*, Soojin Park*",
-      "venue": "Accounts of Chemical Research, 2023, 56(16), 2213–2224",
-      "year": 2023,
-      "status": "published",
-      "doi": "https://pubs.acs.org/doi/10.1021/acs.accounts.3c00308",
       "impact": "IF=18.3, JCR Top 4.8%",
+      "num": "47",
+      "authors": "Minjun Je†, Dong-Yeob Han†, Jaegeon Ryu*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Accounts of Chemical Research, 2023, 56(16), 2213–2224",
+      "status": "published",
+      "title": "Constructing Pure Si Anodes for Advanced Lithium Batteries",
       "tags": [
         "Supplementary Cover"
       ],
-      "openAccess": true
+      "year": 2023,
+      "doi": "https://pubs.acs.org/doi/10.1021/acs.accounts.3c00308"
     },
     {
       "num": "46",
@@ -455,32 +455,20 @@
       "impact": "IF=9.5, JCR Top 15.8%"
     },
     {
-      "num": "44",
-      "title": "Solar Biomass Reforming and Hydrogen Production with Earth-Abundant Si-Based Photocatalysts",
-      "authors": "Yuri Choi†, Sungho Choi†, Inhee Lee, Trang Vu Thien Nguyen, Sanghyun Bae, Yong Hwan Kim, Jaegeon Ryu, Soojin Park*, Jungki Ryu*",
-      "venue": "Advanced Materials, 2023, 35(30), 2301576",
-      "year": 2023,
-      "status": "published",
-      "doi": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202301576",
       "impact": "IF=29.4, JCR Top 2.1%",
+      "num": "44",
+      "authors": "Yuri Choi†, Sungho Choi†, Inhee Lee, Trang Vu Thien Nguyen, Sanghyun Bae, Yong Hwan Kim, Jaegeon Ryu, Soojin Park*, Jungki Ryu*",
+      "openAccess": true,
+      "venue": "Advanced Materials, 2023, 35(30), 2301576",
+      "status": "published",
+      "title": "Solar Biomass Reforming and Hydrogen Production with Earth-Abundant Si-Based Photocatalysts",
       "tags": [
         "Inside Front Cover"
       ],
-      "openAccess": true
+      "year": 2023,
+      "doi": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202301576"
     },
     {
-      "num": "43",
-      "title": "Layering Charged Polymers Enables Highly Integrated High-Capacity Battery Anodes",
-      "authors": "Dong-Yeob Han†, Im Kyung Han†, Hye Bin Son, Youn Soo Kim*, Jaegeon Ryu*, Soojin Park*",
-      "venue": "Advanced Functional Materials, 2023, 33(17), 2213458",
-      "year": 2023,
-      "status": "published",
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202213458",
-      "impact": "IF=19.0, JCR Top 4.2%",
-      "tags": [
-        "Front Cover",
-        "Top Viewed Article"
-      ],
       "press": [
         {
           "name": "nextBigFuture",
@@ -494,7 +482,19 @@
           "name": "YTN 사이언스",
           "url": "https://science.ytn.co.kr/program/view.php?mcd=0082&hcd=&key=202303201710296028"
         }
-      ]
+      ],
+      "impact": "IF=19.0, JCR Top 4.2%",
+      "num": "43",
+      "authors": "Dong-Yeob Han†, Im Kyung Han†, Hye Bin Son, Youn Soo Kim*, Jaegeon Ryu*, Soojin Park*",
+      "venue": "Advanced Functional Materials, 2023, 33(17), 2213458",
+      "status": "published",
+      "title": "Layering Charged Polymers Enables Highly Integrated High-Capacity Battery Anodes",
+      "tags": [
+        "Front Cover",
+        "Top Viewed Article"
+      ],
+      "year": 2023,
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202213458"
     },
     {
       "num": "42",
