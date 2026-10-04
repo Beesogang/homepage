@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "date": "2026.10",
+      "type": "paper",
+      "text": "Our recent work has been accepted in Advanced Functional Materials (DIB / Interface / ALD)."
+    },
+    {
       "date": "2026.08",
       "type": "welcome",
       "text": "We hosted an invited talk from Prof. Sehwan Park (Kookmin U) on the cathode–SSE failure mechanism."
