@@ -105,7 +105,8 @@
       "venue": "Advanced Functional Materials, 2026",
       "year": 2026,
       "status": "published",
-      "impact": "IF=19.9, JCR Top 4.2%"
+      "impact": "IF=19.9, JCR Top 4.2%",
+      "openAccess": true
     },
     {
       "impact": "IF=11.9, JCR Top 10.7%",
