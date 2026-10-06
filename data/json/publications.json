@@ -99,14 +99,15 @@
       "impact": "IF=10.7, JCR Top 14.9%"
     },
     {
-      "num": "71",
-      "title": "Particle-Level ZrO₂ Atomic Layer Deposition Enables Fast-Cycling and Long-Life Graphite Cathodes for Dual-Ion Batteries",
-      "authors": "Jieun Kang†, Sung Eun Jo†, Yunah Ji†, Dongjoo Kim, Sungho Kim, Jaegeon Ryu*, Jihwan An*, Soojin Park*",
-      "venue": "Advanced Functional Materials, 2026",
-      "year": 2026,
-      "status": "published",
       "impact": "IF=19.9, JCR Top 4.2%",
-      "openAccess": true
+      "num": "71",
+      "authors": "Jieun Kang†, Sung Eun Jo†, Yunah Ji†, Dongjoo Kim, Sungho Kim, Jaegeon Ryu*, Jihwan An*, Soojin Park*",
+      "openAccess": true,
+      "venue": "Advanced Functional Materials, 2026",
+      "status": "published",
+      "title": "Particle-Level ZrO₂ Atomic Layer Deposition Enables Fast-Cycling and Long-Life Graphite Cathodes for Dual-Ion Batteries",
+      "year": 2026,
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78750"
     },
     {
       "impact": "IF=11.9, JCR Top 10.7%",
