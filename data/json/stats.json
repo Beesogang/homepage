@@ -1,8 +1,24 @@
 {
   "items": [
-    { "value": "70", "suffix": "+", "label": "Publications" },
-    { "value": "3481", "suffix": "", "label": "Citations" },
-    { "value": "32", "suffix": "", "label": "h-index" },
-    { "value": "53", "suffix": "", "label": "i10-index" }
+    {
+      "value": "70",
+      "suffix": "+",
+      "label": "Publications"
+    },
+    {
+      "value": "3000+",
+      "suffix": "",
+      "label": "Citations"
+    },
+    {
+      "value": "32",
+      "suffix": "",
+      "label": "h-index"
+    },
+    {
+      "value": "53",
+      "suffix": "",
+      "label": "i10-index"
+    }
   ]
 }
