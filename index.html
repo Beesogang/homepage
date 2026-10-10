@@ -33,27 +33,11 @@
           <img src="assets/img/hero-battery.png" alt="Battery cell on a circuit network">
         </div>
       </div>
-      <div class="stream">
-        <div>
-          <span class="mono n">01 · Interface</span>
-          <h3>Electrode–Electrolyte Interface</h3>
-          <p>Governing ion transport and interfacial stability.</p>
-        </div>
-        <div>
-          <span class="mono n">02 · Electrolyte</span>
-          <h3>Electrolyte Solution Chemistry</h3>
-          <p>Designing the ionic medium for stable transport.</p>
-        </div>
-        <div>
-          <span class="mono n">03 · Electrode</span>
-          <h3>Composite Electrode Engineering</h3>
-          <p>Active materials, binders, and architecture in concert.</p>
-        </div>
-      </div>
+      <div class="stats" id="hero-stats"></div>
     </div>
   </section>
 
-  <section class="block alt">
+  <section class="block">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -133,6 +117,49 @@
           </div>
 
         </div>
+        <div class="sc-loop">
+          <span class="sc-loop-icon">↻</span>
+          <span class="sc-loop-text"><b>Closed-loop</b> · spent cells recovered, analyzed and fed back into material design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="mono" style="color:var(--accent-deep);margin-bottom:8px">What we do</div>
+          <h2>Research at a glance.</h2>
+        </div>
+        <p>Three tightly linked fronts — the interface, the electrolyte, and the composite
+        electrode — across lithium and beyond-lithium chemistries.</p>
+      </div>
+      <div class="whatwedo">
+        <a class="wwd-card" href="research.html">
+          <div class="wwd-num mono">01 →</div>
+          <h3>Electrode–Electrolyte Interface</h3>
+          <div class="wwd-ko">계면 설계</div>
+          <p>Artificial SEI/CEI, additives, solvation and coatings that govern ion transport and interfacial stability.</p>
+        </a>
+        <a class="wwd-card" href="research.html">
+          <div class="wwd-num mono">02 →</div>
+          <h3>Electrolyte Solution Chemistry</h3>
+          <div class="wwd-ko">전해질 화학</div>
+          <p>Solvation structure, salt concentration and additive design for a wide, stable operating window.</p>
+        </a>
+        <a class="wwd-card" href="research.html">
+          <div class="wwd-num mono">03 →</div>
+          <h3>Composite Electrode Engineering</h3>
+          <div class="wwd-ko">복합 전극</div>
+          <p>Multifunctional binders and architectures for thick, high-areal-capacity next-generation electrodes.</p>
+        </a>
+        <a class="wwd-card" href="research.html">
+          <div class="wwd-num mono">04 ↻</div>
+          <h3>Beyond Li-ion Systems</h3>
+          <div class="wwd-ko">차세대 전지</div>
+          <p>Na-ion, dual-ion, aqueous Li and Mg battery systems toward sustainable energy storage.</p>
+        </a>
       </div>
     </div>
   </section>
@@ -164,6 +191,6 @@
   </section>
 
   <script src="assets/js/main.js"></script>
-  <script>window.__PAGE_INIT__ = () => renderNews("news-home");</script>
+  <script>window.__PAGE_INIT__ = () => { renderStats("hero-stats"); renderNews("news-home"); };</script>
 </body>
 </html>

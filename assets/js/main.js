@@ -420,7 +420,7 @@ function renderGallery(mountId) {
 // 온라인(웹서버/Netlify)에서 동작합니다. 로컬에서 미리보려면 웹서버로 여세요:
 //   python3 -m http.server 8000  →  http://localhost:8000
 let NEWS = [], TEAM = [], PUBLICATIONS = [], BOOK_CHAPTERS = [],
-    RESEARCH_AREAS = [], PI = null, GALLERY = [];
+    RESEARCH_AREAS = [], PI = null, GALLERY = [], STATS = [];
 
 async function loadJSON(path) {
   try {
@@ -435,15 +435,16 @@ async function loadJSON(path) {
 }
 
 async function loadData() {
-  const [news, team, pubs, research, pi, gallery] = await Promise.all([
+  const [news, team, pubs, research, pi, gallery, stats] = await Promise.all([
     loadJSON("data/json/news.json"),
     loadJSON("data/json/team.json"),
     loadJSON("data/json/publications.json"),
     loadJSON("data/json/research.json"),
     loadJSON("data/json/pi.json"),
     loadJSON("data/json/gallery.json"),
+    loadJSON("data/json/stats.json"),
   ]);
-  // news/team/research/gallery 는 { "items": [...] } 구조. (구버전 배열도 호환)
+  // news/team/research/gallery/stats 는 { "items": [...] } 구조. (구버전 배열도 호환)
   const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : []);
   NEWS = arr(news);
   TEAM = arr(team);
@@ -451,6 +452,42 @@ async function loadData() {
   RESEARCH_AREAS = arr(research);
   if (pi) PI = pi;
   GALLERY = arr(gallery);
+  STATS = arr(stats);
+}
+
+/* --------------------------------------------------- render: STATS (hero) */
+function renderStats(mountId) {
+  const mount = document.getElementById(mountId);
+  if (!mount || !STATS.length) return;
+  mount.innerHTML = STATS.map(s => `
+    <div class="stat">
+      <div class="num"><span class="count" data-target="${esc(String(s.value))}">0</span><span class="suffix">${esc(s.suffix||"")}</span></div>
+      <div class="label">${esc(s.label||"")}</div>
+    </div>`).join("");
+
+  // 숫자가 화면에 보일 때 0 → 목표값으로 카운트업
+  const nums = mount.querySelectorAll(".count");
+  const animate = (el) => {
+    const target = parseInt(el.dataset.target, 10);
+    if (isNaN(target)) { el.textContent = el.dataset.target; return; }
+    const dur = 1400, t0 = performance.now();
+    const step = (now) => {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3); // ease-out
+      el.textContent = Math.round(target * eased).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString();
+    };
+    requestAnimationFrame(step);
+  };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { animate(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    nums.forEach(n => io.observe(n));
+  } else {
+    nums.forEach(animate);
+  }
 }
 
 /* --------------------------------------------------- boot */
