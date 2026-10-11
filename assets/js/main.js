@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { href: "pi.html",           label: "PI" },
   { href: "team.html",         label: "Team" },
   { href: "publications.html", label: "Publications" },
+  { href: "news.html",         label: "News" },
   { href: "gallery.html",      label: "Gallery" },
 ];
 
@@ -104,7 +105,7 @@ function mountChrome() {
 }
 
 /* --------------------------------------------------- render: NEWS */
-function renderNews(mountId, { grouped = false } = {}) {
+function renderNews(mountId, { grouped = false, compact = false } = {}) {
   const mount = document.getElementById(mountId);
   if (!mount || typeof NEWS === "undefined") return;
 
@@ -119,8 +120,14 @@ function renderNews(mountId, { grouped = false } = {}) {
       </div>
     </div>`;
 
+  if (compact) {
+    // Home: 최신 5개만 간결하게 (자세히는 News 페이지)
+    mount.innerHTML = `<div class="news-list compact">${NEWS.slice(0, 5).map(itemHTML).join("")}</div>`;
+    return;
+  }
+
   if (!grouped) {
-    // Home: 최신 8개 + 더보기
+    // 최신 8개 + 더보기
     const recent = NEWS.slice(0, 8);
     const rest = NEWS.slice(8);
     mount.innerHTML = `<div class="news-list">${recent.map(itemHTML).join("")}</div>`;
@@ -159,7 +166,6 @@ function renderTeam(mountId) {
     const tag = m.tag ? `<span class="m-tag">${esc(m.tag)}</span>` : "";
     const research = m.research ? `<div class="m-research">${esc(m.research)}</div>` : "";
     const email = m.email ? `<a class="m-email" href="mailto:${m.email}">${esc(m.email)}</a>` : "";
-    const notes = m.notes?.length ? `<ul class="m-notes">${m.notes.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>` : "";
     const period = m.period ? `<div class="m-research">${esc(m.period)}</div>` : "";
     const current = m.current ? `<div class="m-current">Now at <b>${esc(m.current)}</b></div>` : "";
     return `
@@ -167,7 +173,7 @@ function renderTeam(mountId) {
         ${photoBlock(m)}
         <div class="info">
           <div class="m-name">${esc(m.name)}${m.nameKo?`<span class="ko">${esc(m.nameKo)}</span>`:""}${tag}</div>
-          ${period}${research}${email}${notes}${current}
+          ${period}${research}${email}${current}
         </div>
       </div>`;
   };
@@ -244,37 +250,36 @@ function renderPublications(mountId) {
       </div>`;
   };
 
-  // Filters
-  const filters = el(`
-    <div class="pub-filters">
-      <button data-f="all" class="active">All</button>
-      <button data-f="published">Published</button>
-      <button data-f="pipeline">In press / prep</button>
-    </div>`);
+  // 연도별 탭 구성: [All] [In progress] [2026] [2025] ...
+  const pipeline = PUBLICATIONS.filter(p => p.status !== "published");
+  const published = PUBLICATIONS.filter(p => p.status === "published");
+  const years = [...new Set(published.map(p => p.year))].sort((a,b) => b - a);
+
+  const tabBtns = [`<button data-f="all" class="active">All</button>`];
+  if (pipeline.length) tabBtns.push(`<button data-f="pipeline">In&nbsp;progress</button>`);
+  years.forEach(y => tabBtns.push(`<button data-f="${y}">${y}</button>`));
+  const filters = el(`<div class="pub-filters">${tabBtns.join("")}</div>`);
 
   const listWrap = el(`<div id="pub-list"></div>`);
 
   function draw(mode) {
-    let pubs = PUBLICATIONS;
-    if (mode === "published") pubs = PUBLICATIONS.filter(p => p.status === "published");
-    if (mode === "pipeline")  pubs = PUBLICATIONS.filter(p => p.status !== "published");
-
-    // pipeline group first (no year head), then published grouped by year
     let html = "";
-    const pipeline = pubs.filter(p => p.status !== "published");
-    const published = pubs.filter(p => p.status === "published");
-
-    if (pipeline.length) {
+    if (mode === "all") {
+      if (pipeline.length) {
+        html += `<div class="pub-year-head">In preparation · Submitted · In revision</div>`;
+        html += pipeline.map(pubHTML).join("");
+      }
+      years.forEach(y => {
+        html += `<div class="pub-year-head">${y}</div>`;
+        html += published.filter(p => p.year === y).map(pubHTML).join("");
+      });
+    } else if (mode === "pipeline") {
       html += `<div class="pub-year-head">In preparation · Submitted · In revision</div>`;
       html += pipeline.map(pubHTML).join("");
-    }
-    if (published.length) {
-      const byYear = {};
-      published.forEach(p => (byYear[p.year] ||= []).push(p));
-      Object.keys(byYear).sort((a,b)=>b-a).forEach(y => {
-        html += `<div class="pub-year-head">${y}</div>`;
-        html += byYear[y].map(pubHTML).join("");
-      });
+    } else {
+      const y = parseInt(mode, 10);
+      html += `<div class="pub-year-head">${y}</div>`;
+      html += published.filter(p => p.year === y).map(pubHTML).join("");
     }
     listWrap.innerHTML = html;
   }
