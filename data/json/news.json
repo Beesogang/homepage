@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "text": "Congrats! Jin Yong's paper has been accepted in Advanced Materials (Interface).",
+      "type": "paper",
+      "date": "2026.11"
+    },
+    {
+      "type": "paper",
+      "text": "Congrats! Younsang and Jaehee's paper has been accepted in Applied Physics Reviews (Electrolyte).",
+      "date": "2026.11"
+    },
+    {
       "date": "2026.10",
       "type": "paper",
       "text": "Congrats! Our recent work has been accepted in Advanced Functional Materials (DIB / Interface / ALD)."
