@@ -237,9 +237,16 @@ function renderPublications(mountId) {
     const press = p.press?.length
       ? `<div class="pub-press">Press: ${p.press.map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(" · ")}</div>`
       : "";
+    // 커버 이미지가 있는 논문은 번호 자리에 작은 커버 썸네일을 노출
+    const lead = p.cover
+      ? `<a class="pub-thumb" href="${p.doi||'#'}" target="_blank" rel="noopener" title="View cover article">
+           <img src="${esc(p.cover)}" alt="Journal cover" loading="lazy">
+           ${p.num ? `<span class="pub-thumb-num">${esc(p.num)}</span>` : ""}
+         </a>`
+      : `<div class="pub-num">${p.num ? esc(p.num) : "—"}</div>`;
     return `
-      <div class="pub" data-status="${p.status}">
-        <div class="pub-num">${p.num ? esc(p.num) : "—"}</div>
+      <div class="pub${p.cover?' has-cover':''}" data-status="${p.status}">
+        ${lead}
         <div>
           <div class="pub-title">${titleHTML}</div>
           <div class="pub-authors">${esc(p.authors)}</div>
@@ -249,6 +256,37 @@ function renderPublications(mountId) {
         </div>
       </div>`;
   };
+
+  // ── Journal Covers 쇼케이스 (목록 상단) ─────────────────────────────
+  function coverTagOf(p) {
+    const t = (p.tags||[]).find(x => /cover|frontispiece/i.test(x));
+    return t || "Cover";
+  }
+  function renderCoverShowcase() {
+    const fromPubs = PUBLICATIONS.filter(p => p.cover).map(p => ({
+      num: p.num, img: p.cover, title: p.title, venue: p.venue,
+      year: p.year, tag: coverTagOf(p), doi: p.doi
+    }));
+    const extra = (typeof COVERS !== "undefined" ? COVERS : []);
+    const all = [...fromPubs, ...extra].sort((a,b) => (parseInt(b.num,10)||0) - (parseInt(a.num,10)||0));
+    if (!all.length) return null;
+    const cards = all.map(c => `
+      <a class="cover-card" href="${c.doi||'#'}" target="_blank" rel="noopener">
+        <div class="cover-img"><img src="${esc(c.img)}" alt="${esc(c.title)} — journal cover" loading="lazy"></div>
+        <div class="cover-meta">
+          <span class="cover-tag">${esc(c.tag)}</span>
+          <div class="cover-title">${esc(c.title)}</div>
+          <div class="cover-venue">${esc(c.venue)}</div>
+        </div>
+      </a>`).join("");
+    return el(`<section class="cover-showcase">
+      <div class="cover-showcase-head">
+        <h2>Journal Covers</h2>
+        <p>Featured front, inside, and supplementary covers from our work.</p>
+      </div>
+      <div class="cover-grid">${cards}</div>
+    </section>`);
+  }
 
   // 연도별 탭 구성: [All] [In progress] [2026] [2025] ...
   const pipeline = PUBLICATIONS.filter(p => p.status !== "published");
@@ -292,6 +330,8 @@ function renderPublications(mountId) {
     });
   });
 
+  const showcase = renderCoverShowcase();
+  if (showcase) mount.append(showcase);
   mount.append(filters, listWrap);
   draw("all");
 
@@ -424,7 +464,7 @@ function renderGallery(mountId) {
 // 데이터는 data/json/*.json 에서 불러옵니다. (/admin 편집 화면이 이 파일들을 수정)
 // 온라인(웹서버/Netlify)에서 동작합니다. 로컬에서 미리보려면 웹서버로 여세요:
 //   python3 -m http.server 8000  →  http://localhost:8000
-let NEWS = [], TEAM = [], PUBLICATIONS = [], BOOK_CHAPTERS = [],
+let NEWS = [], TEAM = [], PUBLICATIONS = [], BOOK_CHAPTERS = [], COVERS = [],
     RESEARCH_AREAS = [], PI = null, GALLERY = [], STATS = [];
 
 async function loadJSON(path) {
@@ -453,7 +493,7 @@ async function loadData() {
   const arr = (x) => Array.isArray(x) ? x : (x && Array.isArray(x.items) ? x.items : []);
   NEWS = arr(news);
   TEAM = arr(team);
-  if (pubs) { PUBLICATIONS = pubs.publications || []; BOOK_CHAPTERS = pubs.book_chapters || []; }
+  if (pubs) { PUBLICATIONS = pubs.publications || []; BOOK_CHAPTERS = pubs.book_chapters || []; COVERS = pubs.covers || []; }
   RESEARCH_AREAS = arr(research);
   if (pi) PI = pi;
   GALLERY = arr(gallery);

@@ -156,7 +156,8 @@
         "Front Cover"
       ],
       "year": 2026,
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513832"
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513832",
+      "cover": "assets/img/covers/cover-67.jpg"
     },
     {
       "press": [
@@ -211,7 +212,8 @@
         "Inside Back Cover"
       ],
       "year": 2026,
-      "doi": "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d5ta08103c"
+      "doi": "https://pubs.rsc.org/en/content/articlelanding/2026/ta/d5ta08103c",
+      "cover": "assets/img/covers/cover-65.jpg"
     },
     {
       "num": "64",
@@ -301,7 +303,8 @@
         "Frontispiece Cover"
       ],
       "year": 2025,
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202409114"
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202409114",
+      "cover": "assets/img/covers/cover-58.jpg"
     },
     {
       "impact": "IF=14.1, JCR Top 7.1%",
@@ -437,7 +440,8 @@
         "Supplementary Cover"
       ],
       "year": 2023,
-      "doi": "https://pubs.acs.org/doi/10.1021/acs.accounts.3c00308"
+      "doi": "https://pubs.acs.org/doi/10.1021/acs.accounts.3c00308",
+      "cover": "assets/img/covers/cover-47.jpg"
     },
     {
       "num": "46",
@@ -471,7 +475,8 @@
         "Inside Front Cover"
       ],
       "year": 2023,
-      "doi": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202301576"
+      "doi": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202301576",
+      "cover": "assets/img/covers/cover-44.jpg"
     },
     {
       "press": [
@@ -499,7 +504,8 @@
         "Top Viewed Article"
       ],
       "year": 2023,
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202213458"
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202213458",
+      "cover": "assets/img/covers/cover-43.jpg"
     },
     {
       "num": "42",
@@ -542,6 +548,35 @@
       "status": "published",
       "doi": "https://www.sciencedirect.com/science/article/pii/S016943322201755X",
       "impact": "IF=7.4, JCR Top 2.5%"
+    }
+  ],
+  "covers": [
+    {
+      "num": "31",
+      "img": "assets/img/covers/cover-31.jpg",
+      "title": "Dual Buffering Inverse Design of Three-Dimensional Graphene-Supported Sn-TiO₂ Anodes for Durable Lithium-Ion Batteries",
+      "venue": "Small, 2020, 16(46), 2004861",
+      "year": 2020,
+      "tag": "Cover",
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/smll.202004861"
+    },
+    {
+      "num": "19",
+      "img": "assets/img/covers/cover-19.jpg",
+      "title": "Intramolecular Deformation of Zeotype-Borogermanate toward a Three-Dimensional Porous Germanium Anode for High-Rate Lithium Storage",
+      "venue": "Journal of Materials Chemistry A, 2018, 6(33), 15961–15967",
+      "year": 2018,
+      "tag": "Cover",
+      "doi": "https://pubs.rsc.org/en/content/articlelanding/2018/ta/c8ta04626c"
+    },
+    {
+      "num": "7",
+      "img": "assets/img/covers/cover-07.jpg",
+      "title": "Multiscale Hyperporous Silicon Flake Anodes for High Initial Coulombic Efficiency and Cycle Stability",
+      "venue": "Chemical Communications, 2016, 52(67), 10221–10224",
+      "year": 2016,
+      "tag": "Cover",
+      "doi": "https://pubs.rsc.org/en/content/articlelanding/2016/cc/c6cc04775k"
     }
   ],
   "book_chapters": [

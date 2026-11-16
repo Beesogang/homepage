@@ -421,7 +421,7 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
 }
 .pub {
   padding: 18px 0; border-bottom: 1px solid var(--line-soft);
-  display: grid; grid-template-columns: 40px 1fr; gap: 16px;
+  display: grid; grid-template-columns: 56px 1fr; gap: 18px;
 }
 .pub .pub-num {
   font-family: var(--font-head); font-size: 1rem; color: var(--accent-deep);
@@ -445,6 +445,64 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
 .badge.status-inprep    { background: var(--surface-2); color: var(--ink-soft); }
 .pub .pub-press { margin-top: 8px; font-size: .8rem; color: var(--ink-soft); }
 .pub .pub-press a { margin-right: 4px; }
+
+/* -- 목록 내 커버 썸네일 (커버 보유 논문) -- */
+.pub-thumb {
+  position: relative; display: block; width: 56px; align-self: start;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; background: var(--surface-2);
+}
+.pub-thumb img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform .3s; }
+.pub-thumb:hover img { transform: scale(1.05); }
+.pub-thumb-num {
+  position: absolute; left: 0; bottom: 0;
+  font-family: var(--font-mono); font-size: .62rem; font-weight: 600;
+  background: var(--ink); color: #fff; padding: 1px 5px;
+  border-top-right-radius: var(--radius);
+}
+
+/* ----------------------------------------------- Journal Covers 쇼케이스 */
+.cover-showcase {
+  margin: 4px 0 40px; padding-bottom: 36px; border-bottom: 1px solid var(--line);
+}
+.cover-showcase-head { margin-bottom: 22px; }
+.cover-showcase-head h2 {
+  font-family: var(--font-head); font-size: 1.5rem; color: var(--ink);
+  letter-spacing: -.01em; margin-bottom: 4px;
+}
+.cover-showcase-head p { font-size: .9rem; color: var(--muted); }
+.cover-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 24px 22px;
+}
+.cover-card { display: block; color: inherit; }
+.cover-card:hover { text-decoration: none; }
+.cover-img {
+  aspect-ratio: 3/4; overflow: hidden; border-radius: var(--radius);
+  border: 1px solid var(--line); background: var(--surface-2);
+  box-shadow: var(--shadow); transition: box-shadow .25s, transform .25s;
+}
+.cover-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.cover-card:hover .cover-img { box-shadow: 0 6px 26px rgba(35,37,39,.16); transform: translateY(-3px); }
+.cover-card:hover .cover-img img { transform: scale(1.04); }
+.cover-meta { padding: 11px 2px 0; }
+.cover-tag {
+  display: inline-block; font-family: var(--font-mono); font-size: .64rem;
+  font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--accent-deep); margin-bottom: 5px;
+}
+.cover-title {
+  font-weight: 600; font-size: .86rem; line-height: 1.32; color: var(--ink);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden; margin-bottom: 4px;
+}
+.cover-card:hover .cover-title { color: var(--accent-deep); }
+.cover-venue { font-size: .78rem; color: var(--muted); font-style: italic; }
+@media (max-width: 560px){
+  .pub { grid-template-columns: 48px 1fr; gap: 14px; }
+  .pub-thumb { width: 48px; }
+  .cover-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 18px 14px; }
+}
 
 .chapter { padding: 14px 0; border-bottom: 1px solid var(--line-soft); }
 .chapter .c-title { font-weight: 600; }
