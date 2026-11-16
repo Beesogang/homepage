@@ -482,12 +482,13 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
 
 .pub-media {
   display: block; border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; background: var(--surface-2); box-shadow: var(--shadow);
+  overflow: hidden; background: #fff; box-shadow: var(--shadow);
   align-self: start; transition: box-shadow .25s, transform .25s;
 }
-.pub-media img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform .4s; }
+/* graphical TOC는 가로·정사각 등 비율이 제각각 → 잘리지 않게 담되 과하게 길면 제한 */
+.pub-media img { display: block; width: 100%; height: auto; max-height: 220px; object-fit: contain; transition: transform .4s; }
 .pub-media:hover { box-shadow: 0 6px 24px rgba(35,37,39,.16); transform: translateY(-2px); }
-.pub-media:hover img { transform: scale(1.04); }
+.pub-media:hover img { transform: scale(1.03); }
 
 @media (max-width: 720px){
   .pub, .pub.has-media { grid-template-columns: 54px minmax(0,1fr); gap: 14px; }

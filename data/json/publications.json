@@ -89,7 +89,8 @@
       "year": 2026,
       "status": "published",
       "impact": "IF=29.1, JCR Top 1.8%",
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.75684"
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.75684",
+      "highProfile": true
     },
     {
       "num": "72",
@@ -110,7 +111,8 @@
       "status": "published",
       "title": "Particle-Level ZrO₂ Atomic Layer Deposition Enables Fast-Cycling and Long-Life Graphite Cathodes for Dual-Ion Batteries",
       "year": 2026,
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78750"
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adfm.78750",
+      "highProfile": true
     },
     {
       "impact": "IF=11.9, JCR Top 10.7%",
@@ -157,7 +159,8 @@
       ],
       "year": 2026,
       "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513832",
-      "cover": "assets/img/covers/cover-67.jpg"
+      "cover": "assets/img/covers/cover-67.jpg",
+      "highProfile": true
     },
     {
       "press": [
@@ -185,7 +188,8 @@
       "status": "published",
       "title": "Dual Dynamic Network Architecture Toward Circular Utilization of Bulk Si-based Anodes for Sustainable Li-ion Batteries",
       "year": 2026,
-      "doi": "https://www.sciencedirect.com/science/article/abs/pii/S138589472512514X"
+      "doi": "https://www.sciencedirect.com/science/article/abs/pii/S138589472512514X",
+      "highProfile": true
     },
     {
       "press": [
@@ -245,7 +249,8 @@
       "status": "published",
       "title": "Molecular Engineering of Coacervate Network Binders for Stable Silicon Anodes in Lithium-ion Batteries",
       "year": 2025,
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202509445"
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/adfm.202509445",
+      "highProfile": true
     },
     {
       "num": "61",
@@ -290,7 +295,8 @@
       "year": 2025,
       "status": "published",
       "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202412652",
-      "impact": "IF=26.8, JCR Top 2.1%"
+      "impact": "IF=26.8, JCR Top 2.1%",
+      "highProfile": true
     },
     {
       "impact": "IF=12.1, JCR Top 7.2%",
@@ -326,7 +332,8 @@
       "status": "published",
       "title": "Charge Separation Induced by Asymmetric Surface Charge Effects in Quasi-solid State Electrolyte for Sustainable Anion Storage",
       "year": 2024,
-      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202402293"
+      "doi": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.202402293",
+      "highProfile": true
     },
     {
       "num": "55",
@@ -391,7 +398,8 @@
       "year": 2024,
       "status": "published",
       "doi": "https://www.sciencedirect.com/science/article/pii/S2405829724000047",
-      "impact": "IF=20.4, JCR Top 4.2%"
+      "impact": "IF=20.4, JCR Top 4.2%",
+      "highProfile": true
     },
     {
       "num": "49",
@@ -426,7 +434,8 @@
       "status": "published",
       "title": "Azacyclic Anchor-Enabled Cohesive Graphite Electrodes for Sustainable Anion Storage",
       "year": 2023,
-      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202306157"
+      "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adma.202306157",
+      "highProfile": true
     },
     {
       "impact": "IF=18.3, JCR Top 4.8%",
@@ -441,7 +450,8 @@
       ],
       "year": 2023,
       "doi": "https://pubs.acs.org/doi/10.1021/acs.accounts.3c00308",
-      "cover": "assets/img/covers/cover-47.jpg"
+      "cover": "assets/img/covers/cover-47.jpg",
+      "highProfile": true
     },
     {
       "num": "46",
@@ -476,7 +486,8 @@
       ],
       "year": 2023,
       "doi": "https://onlinelibrary.wiley.com/doi/abs/10.1002/adma.202301576",
-      "cover": "assets/img/covers/cover-44.jpg"
+      "cover": "assets/img/covers/cover-44.jpg",
+      "highProfile": true
     },
     {
       "press": [
@@ -505,7 +516,8 @@
       ],
       "year": 2023,
       "doi": "https://onlinelibrary.wiley.com/doi/10.1002/adfm.202213458",
-      "cover": "assets/img/covers/cover-43.jpg"
+      "cover": "assets/img/covers/cover-43.jpg",
+      "highProfile": true
     },
     {
       "num": "42",
@@ -527,7 +539,8 @@
       "year": 2023,
       "status": "published",
       "doi": "https://www.sciencedirect.com/science/article/pii/S0169433222037163",
-      "impact": "IF=6.7, JCR Top 2.4%"
+      "impact": "IF=6.7, JCR Top 2.4%",
+      "highProfile": true
     },
     {
       "num": "40",
@@ -537,7 +550,8 @@
       "year": 2023,
       "status": "published",
       "doi": "https://onlinelibrary.wiley.com/doi/full/10.1002/adma.202203194",
-      "impact": "IF=29.4, JCR Top 2.1%"
+      "impact": "IF=29.4, JCR Top 2.1%",
+      "highProfile": true
     },
     {
       "num": "39",
@@ -547,7 +561,8 @@
       "year": 2022,
       "status": "published",
       "doi": "https://www.sciencedirect.com/science/article/pii/S016943322201755X",
-      "impact": "IF=7.4, JCR Top 2.5%"
+      "impact": "IF=7.4, JCR Top 2.5%",
+      "highProfile": true
     }
   ],
   "covers": [

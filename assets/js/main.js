@@ -224,24 +224,17 @@ function renderPublications(mountId) {
     if (s === "inprep")    return `<span class="pill status-inprep">In preparation</span>`;
     return "";
   };
-  // 상위 저널 판별: JCR 상위 ≤5% 또는 IF ≥ 20
-  const isHighImpact = (p) => {
-    if (!p.impact) return false;
-    const top = /Top\s*([\d.]+)%/.exec(p.impact);
-    const ifm = /IF\s*=\s*([\d.]+)/.exec(p.impact);
-    return (top && parseFloat(top[1]) <= 5) || (ifm && parseFloat(ifm[1]) >= 20);
-  };
   // 교신/주저자(Jaegeon Ryu) 볼드 처리
   const boldPI = (s) => esc(s).replace(/Jaegeon Ryu([*†]*)/g, "<strong>Jaegeon Ryu$1</strong>");
   const linkIcon = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>`;
 
   const pubHTML = (p) => {
-    const hot = isHighImpact(p);
+    const hot = !!p.highProfile;               // admin에서 논문별로 선택 표시
     const titleHTML = p.doi
       ? `<a href="${p.doi}" target="_blank" rel="noopener">${esc(p.title)}</a>`
       : esc(p.title);
     const pills = [];
-    if (hot) pills.push(`<span class="pill hot">🔥 High Impact</span>`);
+    if (hot) pills.push(`<span class="pill hot">★ High-profile</span>`);
     (p.tags||[]).forEach(t => pills.push(`<span class="pill cover">${esc(t)}</span>`));
     if (p.openAccess) pills.push(`<span class="pill oa">Open Access</span>`);
     const sp = statusPill(p.status); if (sp) pills.push(sp);
@@ -256,12 +249,13 @@ function renderPublications(mountId) {
       meta.push(`<span class="m-press">Press: ${p.press.map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(" · ")}</span>`);
     }
 
-    const media = p.cover
-      ? `<a class="pub-media" href="${p.doi||'#'}" target="_blank" rel="noopener" title="View cover article"><img src="${esc(p.cover)}" alt="Journal cover" loading="lazy"></a>`
+    // 대표 이미지: 논문의 graphical TOC (admin에서 업로드/수정)
+    const media = p.toc
+      ? `<a class="pub-media" href="${p.doi||'#'}" target="_blank" rel="noopener" title="${esc(p.title)}"><img src="${esc(p.toc)}" alt="Graphical abstract" loading="lazy" decoding="async"></a>`
       : "";
 
     return `
-      <article class="pub${p.cover?' has-media':''}${hot?' is-hot':''}" data-status="${p.status}">
+      <article class="pub${p.toc?' has-media':''}${hot?' is-hot':''}" data-status="${p.status}">
         <div class="pub-idx">
           ${p.num ? `<span class="pub-hash">#${esc(p.num)}</span>` : ""}
           ${p.year ? `<span class="pub-yr${p.num?'':' solo'}">${esc(p.year)}</span>` : ""}
