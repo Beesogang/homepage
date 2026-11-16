@@ -28,7 +28,7 @@ function initials(name) {
   return ((p[0]?.[0] || "") + (p[1]?.[0] || "")).toUpperCase();
 }
 function esc(s = "") {
-  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
 /* --------------------------------------------------- header + footer */
@@ -218,43 +218,63 @@ function renderPublications(mountId) {
   const mount = document.getElementById(mountId);
   if (!mount || typeof PUBLICATIONS === "undefined") return;
 
-  const statusBadge = (s) => {
-    if (s === "revision")  return `<span class="badge status-revision">In revision</span>`;
-    if (s === "submitted") return `<span class="badge status-submitted">Submitted</span>`;
-    if (s === "inprep")    return `<span class="badge status-inprep">In preparation</span>`;
+  const statusPill = (s) => {
+    if (s === "revision")  return `<span class="pill status-revision">In revision</span>`;
+    if (s === "submitted") return `<span class="pill status-submitted">Submitted</span>`;
+    if (s === "inprep")    return `<span class="pill status-inprep">In preparation</span>`;
     return "";
   };
+  // 상위 저널 판별: JCR 상위 ≤5% 또는 IF ≥ 20
+  const isHighImpact = (p) => {
+    if (!p.impact) return false;
+    const top = /Top\s*([\d.]+)%/.exec(p.impact);
+    const ifm = /IF\s*=\s*([\d.]+)/.exec(p.impact);
+    return (top && parseFloat(top[1]) <= 5) || (ifm && parseFloat(ifm[1]) >= 20);
+  };
+  // 교신/주저자(Jaegeon Ryu) 볼드 처리
+  const boldPI = (s) => esc(s).replace(/Jaegeon Ryu([*†]*)/g, "<strong>Jaegeon Ryu$1</strong>");
+  const linkIcon = `<svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.5 1.5"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.5-1.5"/></svg>`;
 
   const pubHTML = (p) => {
+    const hot = isHighImpact(p);
     const titleHTML = p.doi
       ? `<a href="${p.doi}" target="_blank" rel="noopener">${esc(p.title)}</a>`
       : esc(p.title);
-    const badges = [];
-    if (p.impact) badges.push(`<span class="badge impact">${esc(p.impact)}</span>`);
-    (p.tags||[]).forEach(t => badges.push(`<span class="badge cover">${esc(t)}</span>`));
-    if (p.openAccess) badges.push(`<span class="badge oa">Open Access</span>`);
-    const sb = statusBadge(p.status); if (sb) badges.push(sb);
-    const press = p.press?.length
-      ? `<div class="pub-press">Press: ${p.press.map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(" · ")}</div>`
+    const pills = [];
+    if (hot) pills.push(`<span class="pill hot">🔥 High Impact</span>`);
+    (p.tags||[]).forEach(t => pills.push(`<span class="pill cover">${esc(t)}</span>`));
+    if (p.openAccess) pills.push(`<span class="pill oa">Open Access</span>`);
+    const sp = statusPill(p.status); if (sp) pills.push(sp);
+
+    const meta = [];
+    if (p.doi) {
+      const doiTxt = (/10\.\d{4,9}\/[^\s"']+/.exec(p.doi) || [""])[0];
+      meta.push(`<a class="m-doi" href="${p.doi}" target="_blank" rel="noopener">${linkIcon}<span>DOI${doiTxt?`: ${esc(doiTxt)}`:""}</span></a>`);
+    }
+    if (p.impact) meta.push(`<span class="m-if">${esc(p.impact)}</span>`);
+    if (p.press?.length) {
+      meta.push(`<span class="m-press">Press: ${p.press.map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(" · ")}</span>`);
+    }
+
+    const media = p.cover
+      ? `<a class="pub-media" href="${p.doi||'#'}" target="_blank" rel="noopener" title="View cover article"><img src="${esc(p.cover)}" alt="Journal cover" loading="lazy"></a>`
       : "";
-    // 커버 이미지가 있는 논문은 번호 자리에 작은 커버 썸네일을 노출
-    const lead = p.cover
-      ? `<a class="pub-thumb" href="${p.doi||'#'}" target="_blank" rel="noopener" title="View cover article">
-           <img src="${esc(p.cover)}" alt="Journal cover" loading="lazy">
-           ${p.num ? `<span class="pub-thumb-num">${esc(p.num)}</span>` : ""}
-         </a>`
-      : `<div class="pub-num">${p.num ? esc(p.num) : "—"}</div>`;
+
     return `
-      <div class="pub${p.cover?' has-cover':''}" data-status="${p.status}">
-        ${lead}
-        <div>
-          <div class="pub-title">${titleHTML}</div>
-          <div class="pub-authors">${esc(p.authors)}</div>
-          <div class="pub-venue">${esc(p.venue)}</div>
-          ${badges.length?`<div class="pub-badges">${badges.join("")}</div>`:""}
-          ${press}
+      <article class="pub${p.cover?' has-media':''}${hot?' is-hot':''}" data-status="${p.status}">
+        <div class="pub-idx">
+          ${p.num ? `<span class="pub-hash">#${esc(p.num)}</span>` : ""}
+          ${p.year ? `<span class="pub-yr${p.num?'':' solo'}">${esc(p.year)}</span>` : ""}
         </div>
-      </div>`;
+        <div class="pub-body">
+          ${pills.length?`<div class="pub-pills">${pills.join("")}</div>`:""}
+          <h3 class="pub-title">${titleHTML}</h3>
+          <div class="pub-authors">${boldPI(p.authors)}</div>
+          <div class="pub-cite">${esc(p.venue)}</div>
+          ${meta.length?`<div class="pub-meta">${meta.join(`<span class="m-sep">·</span>`)}</div>`:""}
+        </div>
+        ${media}
+      </article>`;
   };
 
   // ── Journal Covers 쇼케이스 (목록 상단) ─────────────────────────────
@@ -271,13 +291,8 @@ function renderPublications(mountId) {
     const all = [...fromPubs, ...extra].sort((a,b) => (parseInt(b.num,10)||0) - (parseInt(a.num,10)||0));
     if (!all.length) return null;
     const cards = all.map(c => `
-      <a class="cover-card" href="${c.doi||'#'}" target="_blank" rel="noopener">
-        <div class="cover-img"><img src="${esc(c.img)}" alt="${esc(c.title)} — journal cover" loading="lazy"></div>
-        <div class="cover-meta">
-          <span class="cover-tag">${esc(c.tag)}</span>
-          <div class="cover-title">${esc(c.title)}</div>
-          <div class="cover-venue">${esc(c.venue)}</div>
-        </div>
+      <a class="cover-card" href="${c.doi||'#'}" target="_blank" rel="noopener" title="${esc(c.title)}">
+        <div class="cover-img"><img src="${esc(c.img)}" alt="${esc(c.title)} — journal cover" loading="lazy" decoding="async"></div>
       </a>`).join("");
     return el(`<section class="cover-showcase">
       <div class="cover-showcase-head">
@@ -411,11 +426,28 @@ function renderGallery(mountId) {
     return;
   }
 
+  // 항목별 이미지 목록 정규화: images[] 우선, 없으면 단일 src (구버전 호환)
+  const norm = GALLERY.map(g => {
+    let imgs = Array.isArray(g.images) ? g.images.filter(Boolean) : [];
+    if (!imgs.length && g.src) imgs = [g.src];
+    return { imgs, caption: g.caption || "", date: g.date || "" };
+  }).filter(g => g.imgs.length);
+
+  // 라이트박스용 평탄화 리스트 (모든 항목의 모든 사진을 이어서 탐색)
+  const FLAT = [];
+  norm.forEach(g => {
+    g.firstFlat = FLAT.length;
+    g.imgs.forEach((src, k) => FLAT.push({ src, caption: g.caption, date: g.date, k, total: g.imgs.length }));
+  });
+
   mount.innerHTML = `<div class="gallery-grid">${
-    GALLERY.map((g, i) => `
-      <figure class="gphoto" data-i="${i}" tabindex="0" role="button" aria-label="${esc(g.caption||'photo')} 크게 보기">
-        <div class="gphoto-img"><img src="${g.src}" alt="${esc(g.caption||'')}" loading="lazy"
-          onerror="this.parentElement.innerHTML='<div class=&quot;gphoto-missing&quot;>이미지 없음<br>'+this.getAttribute('src')+'</div>'"></div>
+    norm.map(g => `
+      <figure class="gphoto" data-flat="${g.firstFlat}" tabindex="0" role="button" aria-label="${esc(g.caption||'photo')} 크게 보기">
+        <div class="gphoto-img">
+          <img src="${esc(g.imgs[0])}" alt="${esc(g.caption||'')}" loading="lazy" decoding="async"
+            onerror="this.parentElement.innerHTML='<div class=&quot;gphoto-missing&quot;>이미지 없음</div>'">
+          ${g.imgs.length>1 ? `<span class="gcount">▦ ${g.imgs.length}</span>` : ''}
+        </div>
         ${(g.caption||g.date) ? `<figcaption>${esc(g.caption||'')}${g.date?` <span class="gdate">${esc(g.date)}</span>`:''}</figcaption>` : ''}
       </figure>`).join("")
   }</div>`;
@@ -435,16 +467,18 @@ function renderGallery(mountId) {
   let cur = 0;
 
   function open(i) {
-    cur = (i + GALLERY.length) % GALLERY.length;
-    const g = GALLERY[cur];
-    lbImg.src = g.src; lbImg.alt = g.caption || "";
-    lbCap.textContent = [g.caption, g.date].filter(Boolean).join(" · ");
+    if (!FLAT.length) return;
+    cur = (i + FLAT.length) % FLAT.length;
+    const f = FLAT[cur];
+    lbImg.src = f.src; lbImg.alt = f.caption || "";
+    const pos = f.total > 1 ? ` (${f.k+1}/${f.total})` : "";
+    lbCap.textContent = [f.caption, f.date].filter(Boolean).join(" · ") + pos;
     lb.classList.add("open"); lb.setAttribute("aria-hidden","false");
   }
   function close(){ lb.classList.remove("open"); lb.setAttribute("aria-hidden","true"); lbImg.src=""; }
 
   mount.querySelectorAll(".gphoto").forEach(fig => {
-    const go = () => open(+fig.dataset.i);
+    const go = () => open(+fig.dataset.flat);
     fig.addEventListener("click", go);
     fig.addEventListener("keydown", e => { if (e.key==="Enter"||e.key===" ") { e.preventDefault(); go(); } });
   });
@@ -469,8 +503,9 @@ let NEWS = [], TEAM = [], PUBLICATIONS = [], BOOK_CHAPTERS = [], COVERS = [],
 
 async function loadJSON(path) {
   try {
-    // 캐시 방지: 매 배포 후 최신 데이터를 확실히 읽도록 타임스탬프 쿼리 추가
-    const r = await fetch(path + "?t=" + Date.now(), { cache: "no-store" });
+    // cache:"no-cache" → 매번 서버에 변경 여부만 확인(ETag). 안 바뀌었으면 304(초경량)로
+    // 캐시 재사용 → 배포 후 최신 데이터는 그대로 반영되면서 로딩은 훨씬 빨라짐.
+    const r = await fetch(path, { cache: "no-cache" });
     if (!r.ok) throw new Error(r.status);
     return await r.json();
   } catch (e) {

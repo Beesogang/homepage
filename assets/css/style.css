@@ -419,46 +419,81 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
   font-family: var(--font-head); font-size: 1.3rem; color: var(--ink);
   margin: 34px 0 4px;
 }
+/* ---- 논문 카드 (참고: 좌측 큰 번호 + 본문 + 우측 커버 썸네일) ---- */
 .pub {
-  padding: 18px 0; border-bottom: 1px solid var(--line-soft);
-  display: grid; grid-template-columns: 56px 1fr; gap: 18px;
+  padding: 26px 0; border-bottom: 1px solid var(--line-soft);
+  display: grid; grid-template-columns: 78px minmax(0,1fr); gap: 24px;
+  align-items: start;
 }
-.pub .pub-num {
-  font-family: var(--font-head); font-size: 1rem; color: var(--accent-deep);
-  padding-top: 2px; font-variant-numeric: tabular-nums;
-}
-.pub .pub-title { font-weight: 600; color: var(--ink); margin-bottom: 4px; }
-.pub .pub-title a { color: var(--ink); }
-.pub .pub-title a:hover { color: var(--accent-deep); }
-.pub .pub-authors { font-size: .88rem; color: var(--ink-soft); margin-bottom: 3px; }
-.pub .pub-venue { font-size: .88rem; color: var(--ink); margin-bottom: 8px; font-style: italic; }
-.pub .pub-badges { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
-.badge {
-  font-size: .7rem; font-weight: 600; padding: 2px 8px; border-radius: 999px;
-  border: 1px solid var(--line); color: var(--ink-soft); background: var(--surface);
-}
-.badge.impact { border-color: var(--line); }
-.badge.cover  { background: var(--accent); color: #3a2f00; border-color: var(--accent); font-weight: 700; }
-.badge.oa     { background: var(--green); color: #fff; border-color: var(--green); }
-.badge.status-revision  { background: #7a5a2f; color:#fff; border:none; }
-.badge.status-submitted { background: #4a6070; color:#fff; border:none; }
-.badge.status-inprep    { background: var(--surface-2); color: var(--ink-soft); }
-.pub .pub-press { margin-top: 8px; font-size: .8rem; color: var(--ink-soft); }
-.pub .pub-press a { margin-right: 4px; }
+.pub.has-media { grid-template-columns: 78px minmax(0,1fr) 190px; }
 
-/* -- 목록 내 커버 썸네일 (커버 보유 논문) -- */
-.pub-thumb {
-  position: relative; display: block; width: 56px; align-self: start;
-  border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; background: var(--surface-2);
+.pub-idx { text-align: left; padding-top: 2px; }
+.pub-hash {
+  display: block; font-family: var(--font-head); font-weight: 800;
+  font-size: 1.7rem; line-height: 1; color: var(--faint);
+  font-variant-numeric: tabular-nums; letter-spacing: -.02em;
 }
-.pub-thumb img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform .3s; }
-.pub-thumb:hover img { transform: scale(1.05); }
-.pub-thumb-num {
-  position: absolute; left: 0; bottom: 0;
-  font-family: var(--font-mono); font-size: .62rem; font-weight: 600;
-  background: var(--ink); color: #fff; padding: 1px 5px;
-  border-top-right-radius: var(--radius);
+.pub-hash.dim { color: var(--line); }
+.pub.is-hot .pub-hash { color: var(--accent); }
+.pub-yr {
+  display: block; margin-top: 6px; font-family: var(--font-mono);
+  font-size: .72rem; color: var(--muted); font-variant-numeric: tabular-nums;
+}
+.pub-yr.solo { margin-top: 2px; font-size: .9rem; font-weight: 600; color: var(--faint); }
+
+.pub-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 9px; }
+.pill {
+  font-family: var(--font-mono); font-size: .66rem; font-weight: 600;
+  letter-spacing: .02em; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--ink-soft); background: var(--surface);
+  white-space: nowrap;
+}
+.pill.hot    { background: rgba(193,62,47,.08); color: #b23b2e; border-color: rgba(193,62,47,.30); }
+.pill.cover  { background: var(--accent); color: #fff; border-color: var(--accent); }
+.pill.oa     { background: rgba(79,122,87,.10); color: var(--green-deep); border-color: rgba(79,122,87,.35); }
+.pill.status-revision  { background: #7a5a2f; color:#fff; border-color:#7a5a2f; }
+.pill.status-submitted { background: #4a6070; color:#fff; border-color:#4a6070; }
+.pill.status-inprep    { background: var(--surface-2); color: var(--ink-soft); border-color: var(--line); }
+
+.pub-title {
+  font-family: var(--font-head); font-weight: 700; font-size: 1.18rem;
+  line-height: 1.32; color: var(--ink); letter-spacing: -.01em; margin: 0 0 8px;
+}
+.pub-title a { color: var(--ink); }
+.pub-title a:hover { color: var(--accent-deep); text-decoration: none; }
+.pub-authors { font-size: .9rem; color: var(--ink-soft); line-height: 1.55; margin-bottom: 5px; }
+.pub-authors strong { color: var(--ink); font-weight: 700; }
+.pub-cite { font-size: .9rem; font-weight: 600; color: var(--ink); margin-bottom: 11px; }
+
+.pub-meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 4px 2px;
+  font-size: .78rem; color: var(--muted);
+}
+.pub-meta .m-sep { color: var(--line); margin: 0 7px; }
+.pub-meta .m-doi {
+  display: inline-flex; align-items: center; gap: 5px; color: var(--accent-deep);
+  font-family: var(--font-mono); font-size: .74rem;
+}
+.pub-meta .m-doi svg { flex: none; }
+.pub-meta .m-doi:hover { color: var(--accent); text-decoration: none; }
+.pub-meta .m-if { font-weight: 600; color: var(--ink-soft); }
+.pub-meta .m-press a { color: var(--muted); margin: 0 2px; }
+.pub-meta .m-press a:hover { color: var(--accent-deep); }
+
+.pub-media {
+  display: block; border: 1px solid var(--line); border-radius: var(--radius);
+  overflow: hidden; background: var(--surface-2); box-shadow: var(--shadow);
+  align-self: start; transition: box-shadow .25s, transform .25s;
+}
+.pub-media img { display: block; width: 100%; aspect-ratio: 3/4; object-fit: cover; transition: transform .4s; }
+.pub-media:hover { box-shadow: 0 6px 24px rgba(35,37,39,.16); transform: translateY(-2px); }
+.pub-media:hover img { transform: scale(1.04); }
+
+@media (max-width: 720px){
+  .pub, .pub.has-media { grid-template-columns: 54px minmax(0,1fr); gap: 14px; }
+  .pub-hash { font-size: 1.25rem; }
+  .pub-media { grid-column: 2; max-width: 150px; margin-top: 10px; }
+  .pub-title { font-size: 1.05rem; }
 }
 
 /* ----------------------------------------------- Journal Covers 쇼케이스 */
@@ -544,10 +579,18 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
 .gphoto { margin: 0; cursor: pointer; }
 .gphoto:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .gphoto-img {
+  position: relative;
   aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius);
   border: 1px solid var(--line); background: var(--surface-2);
 }
 .gphoto-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
+.gcount {
+  position: absolute; top: 8px; right: 8px; z-index: 1;
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono); font-size: .68rem; font-weight: 600;
+  color: #fff; background: rgba(27,29,31,.72); backdrop-filter: blur(2px);
+  padding: 3px 8px; border-radius: 999px; letter-spacing: .02em;
+}
 .gphoto:hover .gphoto-img img { transform: scale(1.05); }
 .gphoto-missing {
   width: 100%; height: 100%; display: grid; place-items: center;

@@ -188,7 +188,12 @@ collections:
             widget: "list"
             summary: "{{fields.caption}}"
             fields:
-              - { label: "사진", name: "src", widget: "image" }
+              - label: "사진 (여러 장 추가 가능)"
+                name: "images"
+                widget: "list"
+                field: { label: "사진", name: "image", widget: "image" }
+                required: false
+              - { label: "대표 사진 (구버전·선택)", name: "src", widget: "image", required: false }
               - { label: "설명", name: "caption", widget: "string", required: false }
               - { label: "날짜 (예: 2025.06)", name: "date", widget: "string", required: false }
 

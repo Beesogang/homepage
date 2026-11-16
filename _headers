@@ -1,0 +1,16 @@
+# Netlify 캐시 설정 — 반복 방문/페이지 이동 시 로딩 속도 개선
+# 이미지: 거의 바뀌지 않고 새 사진은 새 파일명으로 올라가므로 길게 캐시
+/assets/img/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# 폰트/정적 자산
+/assets/fonts/*
+  Cache-Control: public, max-age=2592000
+
+# 코드·데이터: 캐시하되 매번 변경 여부만 확인(ETag) → 바뀌면 즉시 반영, 아니면 304
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
+/assets/js/*
+  Cache-Control: public, max-age=0, must-revalidate
+/data/json/*
+  Cache-Control: public, max-age=0, must-revalidate
