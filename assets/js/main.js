@@ -249,13 +249,14 @@ function renderPublications(mountId) {
       meta.push(`<span class="m-press">Press: ${p.press.map(x=>`<a href="${x.url}" target="_blank" rel="noopener">${esc(x.name)}</a>`).join(" · ")}</span>`);
     }
 
-    // 대표 이미지: 논문의 graphical TOC (admin에서 업로드/수정)
-    const media = p.toc
-      ? `<a class="pub-media" href="${p.doi||'#'}" target="_blank" rel="noopener" title="${esc(p.title)}"><img src="${esc(p.toc)}" alt="Graphical abstract" loading="lazy" decoding="async"></a>`
+    // 대표 이미지: 업로드한 toc 우선, 없으면 외부 URL(tocUrl). 로드 실패 시 조용히 숨김.
+    const tocSrc = p.toc || p.tocUrl;
+    const media = tocSrc
+      ? `<a class="pub-media" href="${p.doi||'#'}" target="_blank" rel="noopener" title="${esc(p.title)}"><img src="${esc(tocSrc)}" alt="Graphical abstract" loading="lazy" decoding="async" onerror="var a=this.closest('.pub'); if(a) a.classList.remove('has-media'); var m=this.closest('.pub-media'); if(m) m.remove();"></a>`
       : "";
 
     return `
-      <article class="pub${p.toc?' has-media':''}${hot?' is-hot':''}" data-status="${p.status}">
+      <article class="pub${tocSrc?' has-media':''}${hot?' is-hot':''}" data-status="${p.status}">
         <div class="pub-idx">
           ${p.num ? `<span class="pub-hash">#${esc(p.num)}</span>` : ""}
           ${p.year ? `<span class="pub-yr${p.num?'':' solo'}">${esc(p.year)}</span>` : ""}

@@ -124,7 +124,8 @@ collections:
                   - { label: "투고됨 (Submitted)", value: "submitted" }
                   - { label: "준비 중 (In preparation)", value: "inprep" }
               - { label: "DOI 링크", name: "doi", widget: "string", required: false }
-              - { label: "대표 이미지 (Graphical TOC)", name: "toc", widget: "image", required: false, hint: "DOI 페이지의 graphical abstract를 저장해 올리세요. 카드 오른쪽에 표시됩니다." }
+              - { label: "대표 이미지 (Graphical TOC) 업로드", name: "toc", widget: "image", required: false, hint: "DOI 페이지의 graphical abstract를 저장해 올리세요. 카드 오른쪽에 표시됩니다." }
+              - { label: "대표 이미지 URL (외부 링크·선택)", name: "tocUrl", widget: "string", required: false, hint: "업로드 대신, DOI 페이지의 graphical abstract에서 '이미지 주소 복사'한 URL을 붙여넣어도 됩니다. (업로드가 우선)" }
               - { label: "High-profile 표시", name: "highProfile", widget: "boolean", required: false, default: false, hint: "체크하면 카드에 High-profile 뱃지가 붙습니다." }
               - { label: "IF·JCR (예: IF=26.8, JCR Top 2.1%)", name: "impact", widget: "string", required: false }
               - label: "표지·수상 태그 (예: Front Cover)"
