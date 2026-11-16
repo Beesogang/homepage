@@ -1,6 +1,11 @@
 {
   "items": [
     {
+      "type": "welcome",
+      "text": "We hosted an invited talk from Prof. Sujong Chae (Pukyong U) on Si anode design",
+      "date": "2026.11"
+    },
+    {
       "text": "Congrats! Jin Yong's paper has been accepted in Advanced Materials (Interface).",
       "type": "paper",
       "date": "2026.11"
