@@ -25,6 +25,15 @@
       "status": "inprep"
     },
     {
+      "highProfile": false,
+      "openAccess": false,
+      "title": "Aqueous Processing",
+      "authors": "…, Jaegeon Ryu*",
+      "venue": "In preparation, 2027",
+      "year": 2027,
+      "status": "inprep"
+    },
+    {
       "num": "",
       "title": "Electrolyte Design for DIB",
       "authors": "Jieun Kang, …, Jaegeon Ryu*, Soojin Park*",
@@ -566,6 +575,26 @@
       "doi": "https://www.sciencedirect.com/science/article/pii/S016943322201755X"
     }
   ],
+  "book_chapters": [
+    {
+      "title": "Materials Electrochemistry for Dual-ion Batteries",
+      "authors": "Jieun Kang, Jaegeon Ryu*",
+      "book": "Electrochemical Energy Storage Technologies Beyond Li-ion Batteries, Ch. 11",
+      "publisher": "Elsevier, 2024"
+    },
+    {
+      "title": "에너지 저장원을 위한 나노소재",
+      "authors": "Jaegeon Ryu, Sungho Choi, Jieun Kang, Soojin Park*",
+      "book": "나노소재화학 (Textbook), Ch. 9",
+      "publisher": "Sciplus, 2023"
+    },
+    {
+      "title": "Nanoscale design of anode materials for rechargeable batteries: Fundamentals and design principles",
+      "authors": "Jaegeon Ryu*, Soojin Park",
+      "book": "Nanobatteries and Nanogenerators: Materials, Technologies, and Applications, Ch. 7",
+      "publisher": "Elsevier, 2020"
+    }
+  ],
   "covers": [
     {
       "num": "31",
@@ -593,26 +622,6 @@
       "year": 2016,
       "tag": "Cover",
       "doi": "https://pubs.rsc.org/en/content/articlelanding/2016/cc/c6cc04775k"
-    }
-  ],
-  "book_chapters": [
-    {
-      "title": "Materials Electrochemistry for Dual-ion Batteries",
-      "authors": "Jieun Kang, Jaegeon Ryu*",
-      "book": "Electrochemical Energy Storage Technologies Beyond Li-ion Batteries, Ch. 11",
-      "publisher": "Elsevier, 2024"
-    },
-    {
-      "title": "에너지 저장원을 위한 나노소재",
-      "authors": "Jaegeon Ryu, Sungho Choi, Jieun Kang, Soojin Park*",
-      "book": "나노소재화학 (Textbook), Ch. 9",
-      "publisher": "Sciplus, 2023"
-    },
-    {
-      "title": "Nanoscale design of anode materials for rechargeable batteries: Fundamentals and design principles",
-      "authors": "Jaegeon Ryu*, Soojin Park",
-      "book": "Nanobatteries and Nanogenerators: Materials, Technologies, and Applications, Ch. 7",
-      "publisher": "Elsevier, 2020"
     }
   ]
 }
