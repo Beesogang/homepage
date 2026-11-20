@@ -373,7 +373,8 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
   font-family: var(--font-head); font-size: 1.35rem; margin: 46px 0 20px;
   padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;
 }
-.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(166px, 1fr)); gap: 16px; }
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(148px, 1fr)); gap: 13px; }
+.alumni-grid { grid-template-columns: repeat(auto-fill, minmax(136px, 1fr)); gap: 12px; }
 .member {
   background: var(--surface); border: 1px solid var(--line);
   border-radius: var(--radius); overflow: hidden;
@@ -389,8 +390,8 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
   background: linear-gradient(135deg, #2a2c2e 0%, #3f4245 100%);
   color: var(--accent); font-family: var(--font-head); font-size: 1.8rem; font-weight: 600;
 }
-.member .info { padding: 11px 12px 13px; }
-.member .m-name { font-family: var(--font-head); font-weight: 600; font-size: .95rem; line-height: 1.2; }
+.member .info { padding: 9px 11px 11px; }
+.member .m-name { font-family: var(--font-head); font-weight: 600; font-size: .9rem; line-height: 1.2; }
 .member .m-name .ko { color: var(--muted); font-family: var(--font-sans); font-size: .8rem; font-weight: 400; margin-left: 5px; }
 .member .m-tag {
   display: inline-block; margin-left: 5px; font-size: .6rem; font-weight: 600;
@@ -414,6 +415,37 @@ section.block.alt { background: var(--surface-2); border-top: 1px solid var(--li
 }
 .pub-filters button:hover { border-color: var(--accent); color: var(--ink); }
 .pub-filters button.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+/* ---- 접이식 그룹 (Publications 연도 / In Progress) ---- */
+.pub-group { border-bottom: 1px solid var(--line); }
+.pub-group-head {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 18px 2px; font-family: var(--font-head); user-select: none;
+}
+.pub-group-head::-webkit-details-marker { display: none; }
+.pub-group-head .pg-title { font-size: 1.3rem; color: var(--ink); letter-spacing: -.01em; }
+.pub-group-head .pg-count { font-family: var(--font-mono); font-size: .88rem; color: var(--muted); }
+.pub-group-head .pg-chev { margin-left: auto; color: var(--muted); transition: transform .25s; flex: none; }
+.pub-group-head:hover .pg-title { color: var(--accent-deep); }
+.pub-group[open] > .pub-group-head .pg-chev { transform: rotate(180deg); }
+.pub-group[open] > .pub-group-head .pg-title { color: var(--accent-deep); }
+.pub-group-body { padding-bottom: 10px; }
+.pub-group-body .pub { padding-top: 22px; padding-bottom: 22px; }
+.pub-group-body .pub:last-child { border-bottom: none; }
+
+/* ---- Team: Alumni 접이식 ---- */
+.team-alumni { margin-top: 42px; border-top: 1px solid var(--line); }
+.team-alumni-head {
+  list-style: none; cursor: pointer; display: flex; align-items: center; gap: 10px;
+  padding: 20px 2px; font-family: var(--font-head); user-select: none;
+}
+.team-alumni-head::-webkit-details-marker { display: none; }
+.team-alumni-head .pg-title { font-size: 1.35rem; color: var(--ink); }
+.team-alumni-head .ta-count { font-family: var(--font-mono); font-size: .88rem; color: var(--muted); }
+.team-alumni-head .pg-chev { margin-left: auto; color: var(--muted); transition: transform .25s; flex: none; }
+.team-alumni-head:hover .pg-title { color: var(--accent-deep); }
+.team-alumni[open] > .team-alumni-head .pg-chev { transform: rotate(180deg); }
+.team-alumni[open] > .team-alumni-head .pg-title { color: var(--accent-deep); }
 
 .pub-year-head {
   font-family: var(--font-head); font-size: 1.3rem; color: var(--ink);

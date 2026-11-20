@@ -182,13 +182,22 @@ function renderTeam(mountId) {
   const members = TEAM.filter(m => m.role !== "pi" && m.role !== "alumni");
   const alumni  = TEAM.filter(m => m.role === "alumni");
 
+  const chev = `<svg class="pg-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>`;
+
   let html = "";
   if (members.length) {
     html += `<div class="team-grid">${members.map(memberCard).join("")}</div>`;
   }
   if (alumni.length) {
-    html += `<h2 class="team-section-title">Alumni</h2>`;
-    html += `<div class="team-grid">${alumni.map(memberCard).join("")}</div>`;
+    html += `
+      <details class="team-alumni">
+        <summary class="team-alumni-head">
+          <span class="pg-title">Alumni</span>
+          <span class="ta-count">(${alumni.length})</span>
+          ${chev}
+        </summary>
+        <div class="team-grid alumni-grid">${alumni.map(memberCard).join("")}</div>
+      </details>`;
   }
   mount.innerHTML = html;
 }
@@ -298,52 +307,30 @@ function renderPublications(mountId) {
     </section>`);
   }
 
-  // 연도별 탭 구성: [All] [In progress] [2026] [2025] ...
+  // 연도별 접이식 그룹 — In Progress + 각 연도(개수 표기), 최신 연도만 펼침
   const pipeline = PUBLICATIONS.filter(p => p.status !== "published");
   const published = PUBLICATIONS.filter(p => p.status === "published");
   const years = [...new Set(published.map(p => p.year))].sort((a,b) => b - a);
 
-  const tabBtns = [`<button data-f="all" class="active">All</button>`];
-  if (pipeline.length) tabBtns.push(`<button data-f="pipeline">In&nbsp;progress</button>`);
-  years.forEach(y => tabBtns.push(`<button data-f="${y}">${y}</button>`));
-  const filters = el(`<div class="pub-filters">${tabBtns.join("")}</div>`);
+  const chev = `<svg class="pg-chev" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>`;
+  const group = (title, items, open) => `
+    <details class="pub-group"${open ? " open" : ""}>
+      <summary class="pub-group-head">
+        <span class="pg-title">${title}</span>
+        <span class="pg-count">(${items.length})</span>
+        ${chev}
+      </summary>
+      <div class="pub-group-body">${items.map(pubHTML).join("")}</div>
+    </details>`;
 
-  const listWrap = el(`<div id="pub-list"></div>`);
-
-  function draw(mode) {
-    let html = "";
-    if (mode === "all") {
-      if (pipeline.length) {
-        html += `<div class="pub-year-head">In preparation · Submitted · In revision</div>`;
-        html += pipeline.map(pubHTML).join("");
-      }
-      years.forEach(y => {
-        html += `<div class="pub-year-head">${y}</div>`;
-        html += published.filter(p => p.year === y).map(pubHTML).join("");
-      });
-    } else if (mode === "pipeline") {
-      html += `<div class="pub-year-head">In preparation · Submitted · In revision</div>`;
-      html += pipeline.map(pubHTML).join("");
-    } else {
-      const y = parseInt(mode, 10);
-      html += `<div class="pub-year-head">${y}</div>`;
-      html += published.filter(p => p.year === y).map(pubHTML).join("");
-    }
-    listWrap.innerHTML = html;
-  }
-
-  filters.querySelectorAll("button").forEach(b => {
-    b.addEventListener("click", () => {
-      filters.querySelectorAll("button").forEach(x=>x.classList.remove("active"));
-      b.classList.add("active");
-      draw(b.dataset.f);
-    });
-  });
+  let groupsHTML = "";
+  if (pipeline.length) groupsHTML += group("In Progress", pipeline, false);
+  years.forEach((y, i) => { groupsHTML += group(String(y), published.filter(p => p.year === y), i === 0); });
+  const listWrap = el(`<div id="pub-list">${groupsHTML}</div>`);
 
   const showcase = renderCoverShowcase();
   if (showcase) mount.append(showcase);
-  mount.append(filters, listWrap);
-  draw("all");
+  mount.append(listWrap);
 
   // Book chapters
   if (typeof BOOK_CHAPTERS !== "undefined" && BOOK_CHAPTERS.length) {
