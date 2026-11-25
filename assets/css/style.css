@@ -130,7 +130,7 @@ p { margin: 0 0 1rem; }
 
 /* ---------------------------------------------------------------- hero */
 .hero {
-  background: linear-gradient(160deg, var(--band-a) 0%, #141617 55%, var(--band-b) 100%);
+  background: #191b1d;
   color: var(--band-ink); position: relative; overflow: hidden;
   min-height: 90vh; display: flex; align-items: center;
   border-bottom: 1px solid var(--band-line);
@@ -148,10 +148,17 @@ p { margin: 0 0 1rem; }
     repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 60px);
 }
 .hero .wrap { position: relative; z-index: 1; padding: 120px 30px 48px; width: 100%; }
-.hero-top {
-  display: grid; grid-template-columns: 1.2fr .8fr; gap: 48px; align-items: center;
+.hero-top { display: block; }
+.hero-copy { min-width: 0; max-width: 820px; }
+/* workflow film strip — background matches .hero (#191b1d) so it blends seamlessly */
+.hero-workflow {
+  margin: 40px auto 6px; width: 100%; max-width: 1000px;
 }
-.hero-copy { min-width: 0; }
+.hero-workflow img {
+  width: 100%; height: auto; display: block; border-radius: 12px;
+  box-shadow: 0 26px 70px rgba(0,0,0,.5);
+}
+@media (max-width: 720px){ .hero-workflow { margin-top: 28px; } }
 .hero-art { display: flex; justify-content: center; align-items: center; }
 .hero-art img {
   max-width: 100%; max-height: 500px; width: auto;

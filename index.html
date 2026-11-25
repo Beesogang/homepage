@@ -31,34 +31,12 @@
             <a class="btn btn-ghost" href="research.html">Explore research</a>
           </div>
         </div>
-
-        <!-- Cycle loop: battery at center, Material→Electrode→Cell→System orbiting (closed loop) -->
-        <div class="hero-art">
-          <div class="cyc">
-            <svg class="cyc-svg" viewBox="0 0 440 440" aria-hidden="true">
-              <circle class="cyc-track" cx="220" cy="220" r="175"/>
-              <!-- rotating glow arc sweeping the loop (continuous) -->
-              <circle class="cyc-arc" cx="220" cy="220" r="175"/>
-              <!-- flowing ions along the ring (clockwise, staggered) -->
-              <circle class="cyc-flow" r="4.5"><animateMotion dur="11s" repeatCount="indefinite" path="M220,45 a175,175 0 1,1 -0.1,0"/></circle>
-              <circle class="cyc-flow" r="4.5"><animateMotion dur="11s" begin="-2.2s" repeatCount="indefinite" path="M220,45 a175,175 0 1,1 -0.1,0"/></circle>
-              <circle class="cyc-flow alt" r="4.5"><animateMotion dur="11s" begin="-4.4s" repeatCount="indefinite" path="M220,45 a175,175 0 1,1 -0.1,0"/></circle>
-              <circle class="cyc-flow" r="4.5"><animateMotion dur="11s" begin="-6.6s" repeatCount="indefinite" path="M220,45 a175,175 0 1,1 -0.1,0"/></circle>
-              <circle class="cyc-flow alt" r="4.5"><animateMotion dur="11s" begin="-8.8s" repeatCount="indefinite" path="M220,45 a175,175 0 1,1 -0.1,0"/></circle>
-              <!-- node markers at 12 / 3 / 6 / 9 o'clock -->
-              <circle class="cyc-node" cx="220" cy="45" r="6"/>
-              <circle class="cyc-node" cx="395" cy="220" r="6"/>
-              <circle class="cyc-node" cx="220" cy="395" r="6"/>
-              <circle class="cyc-node" cx="45"  cy="220" r="6"/>
-            </svg>
-            <div class="cyc-center"><img src="assets/img/hero-battery.png" alt="Battery cell"></div>
-            <div class="cyc-lab lab-top"><b>01</b> Material</div>
-            <div class="cyc-lab lab-right"><b>02</b> Electrode</div>
-            <div class="cyc-lab lab-bottom"><b>03</b> Cell</div>
-            <div class="cyc-lab lab-left"><b>04</b> System</div>
-          </div>
-        </div>
       </div>
+
+      <figure class="hero-workflow">
+        <img src="assets/img/workflow.gif" width="1000" height="460"
+             alt="Battery R&D workflow — material synthesis, electrode fabrication, cell assembly, and cell evaluation">
+      </figure>
       <div class="stats" id="hero-stats"></div>
     </div>
   </section>
